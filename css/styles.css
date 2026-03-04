@@ -1596,23 +1596,22 @@ p {
 
 @media (max-width: 768px) {
   .nav-links {
+    display: none;
     position: fixed;
     top: var(--nav-height);
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 999;
-    background: #060b18;
+    z-index: 9999;
+    background-color: #060b18;
     border-top: 1px solid rgba(0, 180, 255, 0.15);
     flex-direction: column;
     padding: 40px 24px;
     gap: 4px;
-    transform: translateX(100%);
-    transition: transform var(--transition-med);
   }
 
   .nav-links.open {
-    transform: translateX(0);
+    display: flex;
   }
 
   .nav-links a {

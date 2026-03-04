@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Durand Health | Book Your Assessment</title>
+  <meta name="description" content="Book your executive health and longevity assessment at Durand Health. Contact our team to get started.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="grid-bg"></div>
+    <div class="container">
+      <span class="label" style="display:inline-block;margin-bottom:16px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-cyan);padding:6px 16px;border:1px solid rgba(0,229,255,0.2);border-radius:100px;background:rgba(0,229,255,0.05);">Contact Us</span>
+      <h1>Ready to <span class="text-gradient">Get Started</span>?</h1>
+      <p>Book your assessment, ask a question, or learn more about what we offer. We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="feature-row fade-in">
+
+        <!-- Contact Form -->
+        <div>
+          <h2 style="margin-bottom:8px;">Book Your Assessment</h2>
+          <p style="margin-bottom:32px;">Fill out the form below and our team will get back to you within 24 hours.</p>
+
+          <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="interest">I'm Interested In</label>
+              <select id="interest" name="interest">
+                <option value="">Select an option...</option>
+                <option value="essentials">Durand Essentials ($499)</option>
+                <option value="exec-longevity">Exec + Longevity Assessment</option>
+                <option value="paramedical">Paramedical Services</option>
+                <option value="trauma">Trauma Services</option>
+                <option value="insurance">$1M Global Treatment Insurance</option>
+                <option value="general">General Inquiry</option>
+                <option value="licensing">Clinic Licensing Opportunities</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your health goals or any questions you have..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Send Message →
+            </button>
+          </form>
+
+          <div id="form-success" style="display:none;text-align:center;padding:40px;background:var(--bg-card);border:1px solid rgba(0,229,255,0.2);border-radius:var(--radius-lg);margin-top:24px;">
+            <div style="font-size:3rem;margin-bottom:16px;">✓</div>
+            <h3>Message Sent</h3>
+            <p style="margin-top:8px;">Thank you for reaching out. Our team will be in touch within 24 hours.</p>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <div class="card" style="margin-bottom:24px;">
+            <div class="card-icon">📍</div>
+            <h3>Visit Us</h3>
+            <p style="margin-top:12px;">Our premier 10,000 sq ft clinic is designed for your comfort and the most advanced diagnostics available.</p>
+            <p style="margin-top:12px;color:var(--text-muted);font-size:0.9rem;">Address details coming soon.</p>
+          </div>
+
+          <div class="card" style="margin-bottom:24px;">
+            <div class="card-icon">✉️</div>
+            <h3>Email Us</h3>
+            <p style="margin-top:12px;">
+              <a href="mailto:info@durandhealth.com" style="color:var(--accent-cyan);">info@durandhealth.com</a>
+            </p>
+            <p style="margin-top:8px;font-size:0.9rem;">We respond within 24 hours.</p>
+          </div>
+
+          <div class="card" style="margin-bottom:24px;">
+            <div class="card-icon">📞</div>
+            <h3>Call Us</h3>
+            <p style="margin-top:12px;color:var(--text-muted);font-size:0.9rem;">Phone number coming soon.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🕒</div>
+            <h3>Hours</h3>
+            <p style="margin-top:12px;font-size:0.9rem;">
+              Monday – Friday: 8:00 AM – 6:00 PM<br>
+              Saturday: By appointment<br>
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Licensing CTA -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="cta-banner fade-in">
+        <span class="label" style="display:inline-block;margin-bottom:16px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-cyan);padding:6px 16px;border:1px solid rgba(0,229,255,0.2);border-radius:100px;background:rgba(0,229,255,0.05);">Global Licensing</span>
+        <h2>Bring Durand Health to <span class="text-gradient">Your Market</span></h2>
+        <p>Our clinic model is designed to license worldwide. If you're interested in bringing the most advanced executive health and longevity assessment to your region, let's talk.</p>
+        <a href="mailto:info@durandhealth.com" class="btn btn-primary">Licensing Inquiries →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      // In production, this would send to a backend/API
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

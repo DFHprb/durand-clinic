@@ -1598,16 +1598,19 @@ p {
   .nav-links {
     display: none;
     position: fixed;
-    top: var(--nav-height);
+    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 9999;
-    background-color: #060b18;
+    background: #060b18;
     border-top: 1px solid rgba(0, 180, 255, 0.15);
     flex-direction: column;
-    padding: 40px 24px;
+    padding-top: calc(var(--nav-height) + 40px);
+    padding-left: 24px;
+    padding-right: 24px;
     gap: 4px;
+    overflow-y: auto;
   }
 
   .nav-links.open {

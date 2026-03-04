@@ -613,6 +613,21 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform var(--transition-med);
+}
+
+.feature-visual:hover img {
+  transform: scale(1.03);
+}
+
+.feature-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: inset 0 0 60px rgba(0, 180, 255, 0.08);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .feature-visual .placeholder {

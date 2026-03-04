@@ -1601,8 +1601,9 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(6, 11, 24, 0.98);
-    backdrop-filter: blur(20px);
+    z-index: 999;
+    background: #060b18;
+    border-top: 1px solid rgba(0, 180, 255, 0.15);
     flex-direction: column;
     padding: 40px 24px;
     gap: 4px;

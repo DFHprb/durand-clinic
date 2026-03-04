@@ -1641,6 +1641,72 @@ p {
   pointer-events: none;
 }
 
+/* --- Hospital Carousel --- */
+.hospital-carousel {
+  margin: 40px 0 32px;
+  text-align: center;
+}
+
+.carousel-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: carousel-scroll 40s linear infinite;
+}
+
+.hospital-name {
+  font-family: var(--font-heading);
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  padding: 0 16px;
+  transition: color var(--transition-fast);
+}
+
+.hospital-name:hover {
+  color: var(--accent-cyan);
+}
+
+.hospital-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+@keyframes carousel-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
 /* --- Responsive --- */
 @media (max-width: 1024px) {
   .card-grid-4 {

@@ -22,7 +22,7 @@ function injectNav() {
       <div class="nav-inner">
         <a href="index.html" class="nav-logo">
           <div class="logo-icon">D</div>
-          Durand <span class="highlight">Health</span>
+          The Durand <span class="highlight">Clinic</span>
         </a>
         <div class="nav-links" id="nav-links">
           <a href="index.html" data-page="home">Home</a>
@@ -57,7 +57,7 @@ function injectFooter() {
           <div class="footer-brand">
             <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
               <div class="logo-icon">D</div>
-              Durand <span class="highlight">Health</span>
+              The Durand <span class="highlight">Clinic</span>
             </a>
             <p>The most advanced executive health assessment combined with longevity testing and year-round health intelligence. Redefining what it means to know your health.</p>
           </div>
@@ -83,7 +83,7 @@ function injectFooter() {
           </div>
         </div>
         <div class="footer-bottom">
-          <span>&copy; ${year} Durand Health. All rights reserved.</span>
+          <span>&copy; ${year} The Durand Clinic. All rights reserved.</span>
           <span>Executive Health &middot; Longevity &middot; Concierge</span>
         </div>
       </div>

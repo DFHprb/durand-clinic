@@ -246,6 +246,12 @@ p {
   font-size: 1.2rem;
 }
 
+.nav-logo .logo-text sup {
+  font-size: 0.45em;
+  margin-left: 1px;
+  opacity: 0.6;
+}
+
 .nav-logo span.highlight {
   color: var(--accent-cyan);
 }

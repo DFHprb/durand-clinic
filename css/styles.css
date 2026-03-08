@@ -263,6 +263,7 @@ p {
 
 .nav-logo span.highlight {
   color: var(--accent-cyan);
+  font-weight: 800;
 }
 
 .nav-links {

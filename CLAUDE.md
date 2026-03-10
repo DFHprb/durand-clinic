@@ -63,6 +63,11 @@ durand-clinic/
 - All scroll animations use Intersection Observer
 - Mobile menu is a hamburger toggle
 
+## Collaboration
+- **Two editors:** Paven (DFHprb) + Sarah Heyer (s-heyer / sarah@durandhealth.com)
+- **IMPORTANT:** Always run `git pull` before making edits — Sarah also edits this repo
+- Both have push access to main branch
+
 ## Deploy
 - Repo: DFHprb/durand-clinic (GitHub)
 - Vercel auto-deploys on push to main

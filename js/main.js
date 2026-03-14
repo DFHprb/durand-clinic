@@ -28,7 +28,7 @@ function injectNav() {
           <a href="index.html" data-page="home">Extensive</a>
           <a href="paramedical.html" data-page="paramedical">Paramedical</a>
           <a href="specialty.html" data-page="specialty">Specialty Programs</a>
-          <a href="residential.html" data-page="residential">Residential Programs</a>
+          <a href="residential.html" data-page="residential">Nature Supported Change</a>
           <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
           <a href="contact.html" data-page="contact" class="nav-cta">Book Assessment</a>
         </div>
@@ -65,7 +65,7 @@ function injectFooter() {
             <a href="index.html">Extensive Assessment</a>
             <a href="paramedical.html">Paramedical Services</a>
             <a href="specialty.html">Specialty Programs</a>
-            <a href="residential.html">Residential Programs</a>
+            <a href="residential.html">Nature Supported Change</a>
             <a href="pricing.html">Pricing</a>
           </div>
           <div class="footer-col">

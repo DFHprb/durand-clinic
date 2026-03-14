@@ -64,6 +64,7 @@ function injectFooter() {
             <a href="index.html">Extensive Assessment</a>
             <a href="paramedical.html">Paramedical Services</a>
             <a href="specialty.html">Specialty Programs</a>
+            <a href="residential.html">Residential Programs</a>
             <a href="pricing.html">Pricing</a>
           </div>
           <div class="footer-col">

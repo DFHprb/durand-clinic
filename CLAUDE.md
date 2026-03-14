@@ -53,7 +53,7 @@ durand-clinic/
 ## Design System
 - **Style:** Futuristic, dark, high-contrast, bio-tech aesthetic
 - **Fonts:** Space Grotesk (headings) + Inter (body) via Google Fonts
-- **Colors:** Deep space dark bg (#060b18), electric blue accent (#00b4ff), cyan (#00e5ff), purple (#8b5cf6), magenta (#d946ef)
+- **Colors:** Charcoal slate bg (#2d3347), electric blue accent (#00b4ff), cyan (#00e5ff), purple (#8b5cf6), magenta (#d946ef)
 - **Effects:** Glow borders, gradient text, glassmorphism cards, animated orbs, scroll fade-ins
 
 ## How Components Work

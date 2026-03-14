@@ -28,6 +28,7 @@ function injectNav() {
           <a href="index.html" data-page="home">Extensive</a>
           <a href="paramedical.html" data-page="paramedical">Paramedical</a>
           <a href="specialty.html" data-page="specialty">Specialty Programs</a>
+          <a href="residential.html" data-page="residential">Nature-Based Behavioural Health</a>
           <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
           <a href="contact.html" data-page="contact" class="nav-cta">Book Assessment</a>
         </div>

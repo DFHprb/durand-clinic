@@ -49,6 +49,14 @@ function injectFooter() {
   if (!footerPlaceholder) return;
 
   const year = new Date().getFullYear();
+  const page = document.body.dataset.page;
+  const isResidential = page === 'residential';
+  const brandLine = isResidential
+    ? 'Nature-grounded behavioural health, longevity testing, and ongoing health intelligence. Redefining residential recovery.'
+    : 'The most advanced executive health assessment combined with longevity testing and year-round health intelligence. Redefining what it means to know your health.';
+  const tagline = isResidential
+    ? 'Behavioural Health &middot; Longevity &middot; Nature'
+    : 'Executive Health &middot; Longevity &middot; Concierge';
 
   footerPlaceholder.innerHTML = `
     <footer class="footer">
@@ -59,7 +67,7 @@ function injectFooter() {
               <div class="logo-icon">D</div>
               <span class="logo-text">The Durand <span class="highlight">Clinic</span><sup>®</sup></span>
             </a>
-            <p>The most advanced executive health assessment combined with longevity testing and year-round health intelligence. Redefining what it means to know your health.</p>
+            <p>${brandLine}</p>
           </div>
           <div class="footer-col">
             <h4>Services</h4>
@@ -84,7 +92,7 @@ function injectFooter() {
         </div>
         <div class="footer-bottom">
           <span>&copy; ${year} The Durand Clinic. All rights reserved.</span>
-          <span>Executive Health &middot; Longevity &middot; Concierge</span>
+          <span>${tagline}</span>
         </div>
       </div>
     </footer>
@@ -189,6 +197,10 @@ function initLanguageSelector() {
     { code: 'en', label: 'English', file: 'residential.html' },
     { code: 'fr', label: 'Français', file: 'residential-fr.html' },
     { code: 'de', label: 'Deutsch', file: 'residential-de.html' },
+    { code: 'it', label: 'Italiano', file: 'residential-it.html' },
+    { code: 'nl', label: 'Nederlands', file: 'residential-nl.html' },
+    { code: 'zh', label: '中文', file: 'residential-zh.html' },
+    { code: 'hi', label: 'हिन्दी', file: 'residential-hi.html' },
     { code: 'ar', label: 'العربية', file: 'residential-ar.html' }
   ];
   const current = languages.find(l => l.code === lang) || languages[0];

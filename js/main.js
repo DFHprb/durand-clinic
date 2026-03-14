@@ -31,6 +31,7 @@ function injectNav() {
           <a href="pricing.html" data-page="pricing">Pricing</a>
           <a href="team.html" data-page="team">Our Team</a>
           <a href="faq.html" data-page="faq">FAQ</a>
+          <a href="partners.html" data-page="partners">Partners</a>
           <a href="contact.html" data-page="contact" class="nav-cta">Book Assessment</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
@@ -74,6 +75,7 @@ function injectFooter() {
             <a href="team.html">Our Team</a>
             <a href="pricing.html">Pricing</a>
             <a href="faq.html">FAQ</a>
+            <a href="partners.html">Global Partners</a>
           </div>
           <div class="footer-col">
             <h4>Contact</h4>

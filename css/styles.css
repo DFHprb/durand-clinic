@@ -9,11 +9,11 @@
 /* --- CSS Custom Properties --- */
 :root {
   /* Backgrounds */
-  --bg-primary: #060b18;
-  --bg-secondary: #0c1224;
-  --bg-card: #111a2f;
-  --bg-card-hover: #162040;
-  --bg-glass: rgba(12, 18, 36, 0.7);
+  --bg-primary: #2d3347;
+  --bg-secondary: #343a50;
+  --bg-card: #3a4058;
+  --bg-card-hover: #434a64;
+  --bg-glass: rgba(45, 51, 71, 0.85);
 
   /* Accent Colors */
   --accent-blue: #00b4ff;
@@ -24,17 +24,17 @@
 
   /* Text */
   --text-primary: #ffffff;
-  --text-secondary: #8899b4;
-  --text-muted: #556680;
+  --text-secondary: #c0cee0;
+  --text-muted: #7888a0;
 
   /* Gradients */
   --gradient-brand: linear-gradient(135deg, #00b4ff, #8b5cf6, #d946ef);
   --gradient-blue: linear-gradient(135deg, #00b4ff, #00e5ff);
-  --gradient-subtle: linear-gradient(180deg, #0c1224 0%, #060b18 100%);
+  --gradient-subtle: linear-gradient(180deg, #343a50 0%, #2d3347 100%);
   --gradient-card: linear-gradient(145deg, rgba(0,180,255,0.05), rgba(139,92,246,0.05));
-  --gradient-hero: radial-gradient(ellipse at 30% 20%, rgba(0,180,255,0.12) 0%, transparent 50%),
-                   radial-gradient(ellipse at 70% 80%, rgba(139,92,246,0.08) 0%, transparent 50%),
-                   linear-gradient(180deg, #060b18 0%, #0c1224 100%);
+  --gradient-hero: radial-gradient(ellipse at 30% 20%, rgba(0,180,255,0.10) 0%, transparent 50%),
+                   radial-gradient(ellipse at 70% 80%, rgba(139,92,246,0.06) 0%, transparent 50%),
+                   linear-gradient(180deg, #2d3347 0%, #343a50 100%);
 
   /* Glow Effects */
   --glow-blue: 0 0 20px rgba(0, 180, 255, 0.25);
@@ -1757,7 +1757,7 @@ p {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background: #060b18;
+    background: var(--bg-primary);
     border-top: 1px solid rgba(0, 180, 255, 0.15);
     flex-direction: column;
     padding-top: calc(var(--nav-height) + 40px);

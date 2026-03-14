@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initFaqAccordion();
   setActiveNav();
+  initLanguageSelector();
 });
 
 /* --- Navigation Injection --- */
@@ -175,6 +176,61 @@ function setActiveNav() {
       }
     });
   }, 10);
+}
+
+/* --- Language Selector --- */
+function initLanguageSelector() {
+  const page = document.body.dataset.page;
+  if (page !== 'residential') return;
+
+  // Determine current language from html lang attribute
+  const lang = document.documentElement.lang || 'en';
+  const languages = [
+    { code: 'en', label: 'English', file: 'residential.html' },
+    { code: 'fr', label: 'Français', file: 'residential-fr.html' },
+    { code: 'de', label: 'Deutsch', file: 'residential-de.html' },
+    { code: 'ar', label: 'العربية', file: 'residential-ar.html' }
+  ];
+  const current = languages.find(l => l.code === lang) || languages[0];
+
+  // Wait for nav to be injected
+  setTimeout(() => {
+    const navInner = document.querySelector('.nav-inner');
+    if (!navInner) return;
+
+    const selector = document.createElement('div');
+    selector.className = 'lang-selector';
+    selector.innerHTML = `
+      <button class="lang-btn" aria-label="Select language">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>${current.label}</span>
+      </button>
+      <div class="lang-dropdown">
+        ${languages.filter(l => l.code !== lang).map(l =>
+          `<a href="${l.file}">${l.label}</a>`
+        ).join('')}
+      </div>
+    `;
+
+    // Insert before the toggle button (mobile) or at the end
+    const toggle = navInner.querySelector('.nav-toggle');
+    if (toggle) {
+      navInner.insertBefore(selector, toggle);
+    } else {
+      navInner.appendChild(selector);
+    }
+
+    // Toggle dropdown on click
+    selector.querySelector('.lang-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      selector.classList.toggle('open');
+    });
+
+    // Close on outside click
+    document.addEventListener('click', () => {
+      selector.classList.remove('open');
+    });
+  }, 20);
 }
 
 /* --- Smooth counter animation --- */

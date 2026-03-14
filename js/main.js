@@ -32,6 +32,7 @@ function injectNav() {
           <a href="team.html" data-page="team">Our Team</a>
           <a href="faq.html" data-page="faq">FAQ</a>
           <a href="partners.html" data-page="partners">Partners</a>
+          <a href="enquiry.html" data-page="enquiry">Enquiry</a>
           <a href="contact.html" data-page="contact" class="nav-cta">Book Assessment</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">

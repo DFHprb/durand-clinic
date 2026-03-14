@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Enquiries — The Durand Clinic | Partnership &amp; International Interest</title>
+  <meta name="description" content="Interested in bringing a Durand Clinic to your hospital or healthcare network? Submit your enquiry — we're selectively partnering with hospitals across Canada and internationally.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="enquiry">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="grid-bg"></div>
+    <div class="container">
+      <span class="label" style="display:inline-block;margin-bottom:16px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-cyan);padding:6px 16px;border:1px solid rgba(0,229,255,0.2);border-radius:100px;background:rgba(0,229,255,0.05);">Global Enquiries</span>
+      <h1>Partner With <span class="text-gradient">The Durand Clinic.</span></h1>
+      <p>We&rsquo;re selectively partnering with hospitals and healthcare networks across Canada and internationally. Tell us about your organization and we&rsquo;ll be in touch.</p>
+    </div>
+  </section>
+
+  <!-- Enquiry Form -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;" class="fade-in">
+
+        <!-- Form -->
+        <div>
+          <h2 style="margin-bottom:8px;">Submit Your <span class="text-gradient">Enquiry</span></h2>
+          <p style="color:var(--text-secondary);margin-bottom:32px;">All enquiries are reviewed by our partnerships team. We&rsquo;ll respond within 48 hours.</p>
+
+          <form id="enquiry-form" onsubmit="handleEnquirySubmit(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="organization">Organization / Hospital *</label>
+                <input type="text" id="organization" name="organization" required placeholder="Your hospital or organization name">
+              </div>
+              <div class="form-group">
+                <label for="role">Your Role</label>
+                <input type="text" id="role" name="role" placeholder="e.g. CEO, VP Partnerships, Medical Director">
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="country">Country *</label>
+                <input type="text" id="country" name="country" required placeholder="Country">
+              </div>
+              <div class="form-group">
+                <label for="enquiryType">Enquiry Type</label>
+                <select id="enquiryType" name="enquiryType">
+                  <option value="">Select...</option>
+                  <option value="hospital-partner">Hospital Partnership &mdash; Set Up a Durand Clinic</option>
+                  <option value="pan-canadian">Pan-Canadian Healthcare Network</option>
+                  <option value="union-employer">Union or Employer Program</option>
+                  <option value="licensing">Clinic Licensing Opportunity</option>
+                  <option value="other">Other / General Enquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Interest *</label>
+              <textarea id="message" name="message" required placeholder="Describe your organization, what you're looking for, and how you see a partnership working..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Submit Enquiry &rarr;
+            </button>
+          </form>
+
+          <div id="form-success" style="display:none;text-align:center;padding:40px;background:var(--bg-card);border:1px solid rgba(0,229,255,0.2);border-radius:var(--radius-lg);margin-top:24px;">
+            <div style="font-size:3rem;margin-bottom:16px;">&#x2713;</div>
+            <h3>Enquiry Submitted</h3>
+            <p style="margin-top:8px;">Thank you for your interest. Our partnerships team will review your enquiry and respond within 48 hours.</p>
+          </div>
+        </div>
+
+        <!-- Sidebar Info -->
+        <div>
+          <div class="card" style="margin-bottom:24px;">
+            <div class="card-icon">&#x1F3E5;</div>
+            <h3>Hospital Partnerships</h3>
+            <p>Set up a Durand Clinic within your hospital. We provide the year-round health intelligence platform, clinical protocols, and specialized testing &mdash; you provide the facilities and clinical team.</p>
+            <a href="partners.html" class="btn btn-outline" style="margin-top:16px;">Learn About the Model &rarr;</a>
+          </div>
+
+          <div class="card" style="margin-bottom:24px;">
+            <div class="card-icon">&#x1F1E8;&#x1F1E6;</div>
+            <h3>Pan-Canadian Networks</h3>
+            <p>We integrate with hundreds of EHR systems and thousands of physicians across Canada. Interested in bringing Durand to your provincial or national network? Let&rsquo;s talk.</p>
+          </div>
+
+          <div class="card" style="margin-bottom:24px;">
+            <div class="card-icon">&#x1F310;</div>
+            <h3>International Interest</h3>
+            <p>From Asia-Pacific to Europe and the Middle East &mdash; the Durand model is designed for global deployment. Your facilities. Our intelligence platform. One seamless patient experience.</p>
+          </div>
+
+          <div style="padding:24px;background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid rgba(0,229,255,0.1);text-align:center;">
+            <p style="color:var(--text-muted);font-size:14px;margin:0;">Direct enquiries welcome at</p>
+            <a href="mailto:sarah@durandhealth.com" style="color:var(--accent-cyan);font-size:16px;font-weight:600;text-decoration:none;">sarah@durandhealth.com</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleEnquirySubmit(e) {
+      e.preventDefault();
+      var form = document.getElementById('enquiry-form');
+      var data = new FormData(form);
+      var subject = encodeURIComponent('Durand Clinic Global Enquiry — ' + (data.get('organization') || 'New Enquiry'));
+      var body = encodeURIComponent(
+        'Name: ' + data.get('firstName') + ' ' + data.get('lastName') + '\n' +
+        'Email: ' + data.get('email') + '\n' +
+        'Phone: ' + (data.get('phone') || 'Not provided') + '\n' +
+        'Organization: ' + data.get('organization') + '\n' +
+        'Role: ' + (data.get('role') || 'Not provided') + '\n' +
+        'Country: ' + data.get('country') + '\n' +
+        'Enquiry Type: ' + (data.get('enquiryType') || 'Not specified') + '\n\n' +
+        'Message:\n' + data.get('message')
+      );
+      window.open('mailto:sarah@durandhealth.com?subject=' + subject + '&body=' + body, '_self');
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

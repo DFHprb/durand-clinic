@@ -25,14 +25,10 @@ function injectNav() {
           <span class="logo-text">The Durand <span class="highlight">Clinic</span><sup>®</sup></span>
         </a>
         <div class="nav-links" id="nav-links">
-          <a href="index.html" data-page="home">Home</a>
-          <a href="about.html" data-page="about">About</a>
-          <a href="services.html" data-page="services">Services</a>
-          <a href="pricing.html" data-page="pricing">Pricing</a>
-          <a href="team.html" data-page="team">Our Team</a>
-          <a href="faq.html" data-page="faq">FAQ</a>
-          <a href="partners.html" data-page="partners">Partners</a>
-          <a href="enquiry.html" data-page="enquiry">Enquiry</a>
+          <a href="index.html" data-page="home">Extensive</a>
+          <a href="paramedical.html" data-page="paramedical">Paramedical</a>
+          <a href="specialty.html" data-page="specialty">Specialty Programs</a>
+          <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
           <a href="contact.html" data-page="contact" class="nav-cta">Book Assessment</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
@@ -65,18 +61,16 @@ function injectFooter() {
           </div>
           <div class="footer-col">
             <h4>Services</h4>
-            <a href="services.html#exec">Executive Health</a>
-            <a href="services.html#longevity">Longevity Assessment</a>
-            <a href="services.html#paramedical">Paramedical Services</a>
-            <a href="services.html#spa">Weekend Spa</a>
+            <a href="index.html">Extensive Assessment</a>
+            <a href="paramedical.html">Paramedical Services</a>
+            <a href="specialty.html">Specialty Programs</a>
+            <a href="pricing.html">Pricing</a>
           </div>
           <div class="footer-col">
             <h4>Company</h4>
             <a href="about.html">About Us</a>
-            <a href="team.html">Our Team</a>
-            <a href="pricing.html">Pricing</a>
             <a href="faq.html">FAQ</a>
-            <a href="partners.html">Global Partners</a>
+            <a href="partners.html">Global Partner Enquiries</a>
           </div>
           <div class="footer-col">
             <h4>Contact</h4>

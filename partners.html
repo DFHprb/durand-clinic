@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Partners — The Durand Clinic | Hospital Partnership Program</title>
+  <title>Global Partner Enquiries — The Durand Clinic | Hospital Partnership Program</title>
   <meta name="description" content="Partner with Durand to bring world-class executive longevity assessments to your hospital — powered by a year-round health intelligence platform, EHR integration, and customizable clinical protocols.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -171,14 +171,80 @@
     </div>
   </section>
 
-  <!-- CTA Banner -->
-  <section class="section" style="background: var(--bg-secondary);">
+  <!-- Enquiry Form -->
+  <section class="section" style="background: var(--bg-secondary);" id="enquiry">
     <div class="container">
-      <div class="cta-banner fade-in">
-        <h2>Interested in Becoming a <span class="text-gradient">Durand Clinic Partner?</span></h2>
-        <p>We&rsquo;re selectively partnering with hospitals that share our commitment to predictive, preventive health. Let&rsquo;s explore what a Durand Clinic could look like at your facility.</p>
-        <div class="btn-group">
-          <a href="contact.html" class="btn btn-primary">Start the Conversation &rarr;</a>
+      <div class="section-header fade-in">
+        <span class="label">Get In Touch</span>
+        <h2>Submit Your <span class="text-gradient">Enquiry</span></h2>
+        <p>All enquiries are reviewed by our partnerships team. We&rsquo;ll respond within 48 hours.</p>
+      </div>
+
+      <div style="max-width:700px;margin:0 auto;" class="fade-in">
+        <form id="enquiry-form" onsubmit="handleEnquirySubmit(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="organization">Organization / Hospital *</label>
+              <input type="text" id="organization" name="organization" required placeholder="Your hospital or organization name">
+            </div>
+            <div class="form-group">
+              <label for="country">Country *</label>
+              <input type="text" id="country" name="country" required placeholder="Country">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="enquiryType">Enquiry Type</label>
+            <select id="enquiryType" name="enquiryType">
+              <option value="">Select...</option>
+              <option value="hospital-partner">Hospital Partnership &mdash; Set Up a Durand Clinic</option>
+              <option value="pan-canadian">Pan-Canadian Healthcare Network</option>
+              <option value="union-employer">Union or Employer Program</option>
+              <option value="licensing">Clinic Licensing Opportunity</option>
+              <option value="other">Other / General Enquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Us About Your Interest *</label>
+            <textarea id="message" name="message" required placeholder="Describe your organization, what you're looking for, and how you see a partnership working..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            Submit Enquiry &rarr;
+          </button>
+        </form>
+
+        <div id="form-success" style="display:none;text-align:center;padding:40px;background:var(--bg-card);border:1px solid rgba(0,229,255,0.2);border-radius:var(--radius-lg);margin-top:24px;">
+          <div style="font-size:3rem;margin-bottom:16px;">&#x2713;</div>
+          <h3>Enquiry Submitted</h3>
+          <p style="margin-top:8px;">Thank you for your interest. Our partnerships team will review your enquiry and respond within 48 hours.</p>
+        </div>
+
+        <div style="text-align:center;margin-top:24px;">
+          <p style="color:var(--text-muted);font-size:14px;">Or email us directly at <a href="mailto:sarah@durandhealth.com" style="color:var(--accent-cyan);text-decoration:none;font-weight:600;">sarah@durandhealth.com</a></p>
         </div>
       </div>
     </div>
@@ -186,5 +252,25 @@
 
   <div id="footer-placeholder"></div>
   <script src="js/main.js"></script>
+  <script>
+    function handleEnquirySubmit(e) {
+      e.preventDefault();
+      var form = document.getElementById('enquiry-form');
+      var data = new FormData(form);
+      var subject = encodeURIComponent('Durand Clinic Global Enquiry — ' + (data.get('organization') || 'New Enquiry'));
+      var body = encodeURIComponent(
+        'Name: ' + data.get('firstName') + ' ' + data.get('lastName') + '\n' +
+        'Email: ' + data.get('email') + '\n' +
+        'Phone: ' + (data.get('phone') || 'Not provided') + '\n' +
+        'Organization: ' + data.get('organization') + '\n' +
+        'Country: ' + data.get('country') + '\n' +
+        'Enquiry Type: ' + (data.get('enquiryType') || 'Not specified') + '\n\n' +
+        'Message:\n' + data.get('message')
+      );
+      window.open('mailto:sarah@durandhealth.com?subject=' + subject + '&body=' + body, '_self');
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
 </body>
 </html>

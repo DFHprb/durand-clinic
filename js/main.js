@@ -32,6 +32,7 @@ function injectNav() {
             <div class="nav-dropdown-menu">
               <div class="nav-dropdown-menu-inner">
                 <a href="chiropractic.html" data-page="chiropractic">Chiropractic</a>
+                <a href="naturopathic.html" data-page="naturopathic">Naturopathic Medicine</a>
               </div>
             </div>
           </div>

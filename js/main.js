@@ -36,6 +36,7 @@ function injectNav() {
                 <a href="neurofeedback.html" data-page="neurofeedback">Neurofeedback</a>
                 <a href="physiotherapy.html" data-page="physiotherapy">Physiotherapy</a>
                 <a href="traditional-chinese-medicine.html" data-page="traditional-chinese-medicine">Traditional Chinese Medicine</a>
+                <a href="nutritional-support.html" data-page="nutritional-support">Nutritional Support &amp; Supplements</a>
               </div>
             </div>
           </div>

@@ -40,6 +40,7 @@ function injectNav() {
                 <a href="acupuncture.html" data-page="acupuncture">Acupuncture</a>
                 <a href="registered-massage-therapy.html" data-page="registered-massage-therapy">Registered Massage Therapy</a>
                 <a href="counselling-psychotherapy.html" data-page="counselling-psychotherapy">Counselling &amp; Psychotherapy</a>
+                <a href="reflexology-lymphatic-drainage.html" data-page="reflexology-lymphatic-drainage">Reflexology &amp; Lymphatic Drainage</a>
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@
 IMAGES_DIR="$(dirname "$0")/images"
 
 # Portrait photos: matched by filename keywords (people's names)
-PORTRAIT_PATTERN="hall|shen|bolos|guo|fediurek|copland|barnim|kipp|marryum|divincenzo|poplawski|nithya|pschibul|duong|ashley|spring|josef|nigel|aaron|rebecca|ola|sleep|corey"
+PORTRAIT_PATTERN="hall|shen|bolos|guo|fediurek|copland|barnim|kipp|marryum|divincenzo|poplawski|nithya|pschibul|duong|ashley|spring|josef|nigel|aaron|rebecca|ola|sleep|corey|keyte|katie"
 
 PORTRAIT_MAX=400
 SCENE_MAX=1400

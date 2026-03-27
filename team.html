@@ -3,15 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Team — The Durand Clinic | Executive Health & Longevity</title>
-  <meta name="description" content="Meet the medical team behind The Durand Clinic's advanced executive health and longevity assessments.">
-  <meta name="keywords" content="medical team, executive health physicians, longevity medicine doctors, clinical team Canada, addiction medicine specialist, psychotherapist, equine therapy team">
+  <title>Our Team — The Durand Clinic</title>
+  <meta name="description" content="Meet the team at The Durand Clinic — physicians, paramedical practitioners, wellness specialists, and the people dedicated to delivering exceptional care.">
+  <meta name="keywords" content="Durand Clinic team, paramedical practitioners, naturopath, chiropractor, physiotherapist, RMT, psychotherapist, Hamilton health team">
   <link rel="canonical" href="https://durand-clinic.vercel.app/team.html">
-  <meta property="og:title" content="Our Team — The Durand Clinic | Executive Health & Longevity">
-  <meta property="og:description" content="Meet the medical team behind The Durand Clinic's advanced executive health and longevity assessments.">
+  <meta property="og:title" content="Our Team — The Durand Clinic">
+  <meta property="og:description" content="Meet the physicians, paramedical practitioners, and wellness specialists behind The Durand Clinic.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://durand-clinic.vercel.app/team.html">
+  <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .team-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .team-member {
+      text-align: center;
+    }
+    .team-member img,
+    .team-member .team-photo-placeholder {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      border: 2px solid rgba(0,229,255,0.2);
+      display: block;
+      margin: 0 auto 16px;
+    }
+    .team-photo-placeholder {
+      background: rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .team-member h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+    .team-member p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    @media (max-width: 900px) {
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .team-grid,
+      .team-grid-3 { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    }
+  </style>
 </head>
 <body data-page="team">
 
@@ -24,109 +77,261 @@
     <div class="grid-bg"></div>
     <div class="container">
       <span class="label" style="display:inline-block;margin-bottom:16px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-cyan);padding:6px 16px;border:1px solid rgba(0,229,255,0.2);border-radius:100px;background:rgba(0,229,255,0.05);">Our Team</span>
-      <h1>World-Class Medicine. <span class="text-gradient">Personal Touch.</span></h1>
-      <p>Our physicians and clinical team deliver the most advanced executive health assessments with the care and attention of a concierge practice.</p>
+      <h1>The People Behind <span class="text-gradient">Your Care.</span></h1>
+      <p>A dedicated team of physicians, paramedical practitioners, wellness specialists, and clinical support staff — all working together to deliver exceptional, whole-person health care.</p>
     </div>
   </section>
 
-  <!-- Leadership -->
+  <!-- Leadership & Clinical -->
   <section class="section">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="label">Leadership</span>
-        <h2>The People Behind <span class="text-gradient">The Durand Clinic</span></h2>
-        <p>A team of physicians, scientists, and health technology innovators united by one goal — redefining executive health.</p>
+        <span class="label">Leadership &amp; Clinical</span>
+        <h2>Guiding <span class="text-gradient">Your Experience</span></h2>
       </div>
+      <div class="team-grid-3 fade-in">
 
-      <div class="card-grid card-grid-3 fade-in">
-        <div class="team-card">
-          <div class="team-card-photo">👤</div>
-          <div class="team-card-info">
-            <h3>Medical Director</h3>
-            <div class="role">Physician — Executive Health</div>
-            <p>Details coming soon. Our medical leadership brings decades of experience in advanced diagnostics and preventive medicine.</p>
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
           </div>
+          <h3>Dr. Nick Cuberovic</h3>
+          <p>Physician</p>
         </div>
-        <div class="team-card">
-          <div class="team-card-photo">👤</div>
-          <div class="team-card-info">
-            <h3>Chief Science Officer</h3>
-            <div class="role">Longevity & Multi-Omics</div>
-            <p>Details coming soon. Leading our exclusive longevity assessment program and multi-omics testing protocols.</p>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
           </div>
+          <h3>Ashley Swanek</h3>
+          <p>Nurse</p>
         </div>
-        <div class="team-card">
-          <div class="team-card-photo">👤</div>
-          <div class="team-card-info">
-            <h3>Clinical Director</h3>
-            <div class="role">Patient Experience</div>
-            <p>Details coming soon. Ensuring every assessment delivers a VIP experience from start to finish.</p>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
           </div>
+          <h3>April Neary</h3>
+          <p>Clinical &amp; Health Services Manager</p>
         </div>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
+          </div>
+          <h3>Angela Checchia</h3>
+          <p>Corporate Sales</p>
+        </div>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
+          </div>
+          <h3>Natalia Tinebra</h3>
+          <p>Administration</p>
+        </div>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
+          </div>
+          <h3>Krysta Reesor</h3>
+          <p>Administration</p>
+        </div>
+
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- Clinical Team -->
+  <!-- Paramedical Team -->
   <section class="section" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="label">Clinical Team</span>
-        <h2>Physicians & <span class="text-gradient">Specialists</span></h2>
-        <p>Every member of our clinical team is selected for both their medical expertise and their commitment to patient-centered care.</p>
+        <span class="label">Paramedical Team</span>
+        <h2>Practitioners Committed to <span class="text-gradient">Your Health</span></h2>
       </div>
+      <div class="team-grid fade-in">
 
-      <div class="card-grid card-grid-4 fade-in">
-        <div class="team-card">
-          <div class="team-card-photo">👤</div>
-          <div class="team-card-info">
-            <h3>Cardiologist</h3>
-            <div class="role">Cardiac Assessment</div>
-            <p>Advanced cardiac stress testing and cardiovascular risk evaluation.</p>
-          </div>
+        <div class="team-member">
+          <img src="images/crysana-copland.png" alt="Dr. Crysana Copland — Naturopathic Doctor" loading="lazy">
+          <h3>Dr. Crysana Copland</h3>
+          <p>Naturopathic Doctor</p>
         </div>
-        <div class="team-card">
-          <div class="team-card-photo">👤</div>
-          <div class="team-card-info">
-            <h3>Internal Medicine</h3>
-            <div class="role">Executive Health</div>
-            <p>Comprehensive health assessment and physician consultation.</p>
-          </div>
-        </div>
-        <div class="team-card">
-          <div class="team-card-photo">👤</div>
-          <div class="team-card-info">
-            <h3>Longevity Specialist</h3>
-            <div class="role">Anti-Aging & Genomics</div>
-            <p>Epigenetics, biological age analysis, and longevity roadmapping.</p>
-          </div>
-        </div>
-        <div class="team-card">
-          <div class="team-card-photo">👤</div>
-          <div class="team-card-info">
-            <h3>Imaging Specialist</h3>
-            <div class="role">Diagnostic Imaging</div>
-            <p>Full body scans and advanced imaging interpretation.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="fade-in" style="text-align:center;margin-top:48px;">
-        <p style="color:var(--text-muted);font-size:0.95rem;">Full team profiles and credentials coming soon. Contact us to learn more about our clinical team.</p>
-        <a href="contact.html" class="btn btn-outline" style="margin-top:20px;">Get in Touch →</a>
+        <div class="team-member">
+          <img src="images/josef-fediurek.png" alt="Dr. Josef Fediurek — Chiropractor" loading="lazy">
+          <h3>Dr. Josef Fediurek</h3>
+          <p>Chiropractor</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/nigel-barnim.png" alt="Nigel Barnim — Neurofeedback Technician" loading="lazy">
+          <h3>Nigel Barnim</h3>
+          <p>Neurofeedback Technician</p>
+        </div>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
+          </div>
+          <h3>Aaron Kipp</h3>
+          <p>Physiotherapist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/marryum-physiotherapist.png" alt="Marryum — Physiotherapist" loading="lazy">
+          <h3>Marryum</h3>
+          <p>Physiotherapist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/tcm-spring-shen.png" alt="Spring Shen — TCM &amp; Acupuncture" loading="lazy">
+          <h3>Chun Hui (Spring) Shen</h3>
+          <p>TCM &amp; Acupuncture</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/tcm-jane-guo.png" alt="Jane Guo — TCM &amp; Acupuncture" loading="lazy">
+          <h3>Jie (Jane) Guo</h3>
+          <p>TCM &amp; Acupuncture</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/tcm-sophia-bolos.png" alt="Sophia Bolos — RMT &amp; Acupuncturist" loading="lazy">
+          <h3>Sophia Bolos</h3>
+          <p>RMT &amp; Acupuncturist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/ashley-divincenzo.png" alt="Ashley DiVincenzo — Registered Nutritionist" loading="lazy">
+          <h3>Ashley DiVincenzo</h3>
+          <p>Registered Nutritionist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/rmt-john-hall.png" alt="John Hall — RMT" loading="lazy">
+          <h3>John Hall</h3>
+          <p>Registered Massage Therapist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/rmt-my-nghi-duong.jpg" alt="My-Nghi Duong — RMT" loading="lazy">
+          <h3>My-Nghi Duong</h3>
+          <p>Registered Massage Therapist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/rmt-ola-poplawski.png" alt="Ola Poplawski — RMT" loading="lazy">
+          <h3>Ola Poplawski</h3>
+          <p>Registered Massage Therapist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/rmt-nithya.jpg" alt="Nithya — RMT" loading="lazy">
+          <h3>Nithya</h3>
+          <p>Registered Massage Therapist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/rmt-rebecca-pschibul.jpg" alt="Rebecca Pschibul — RMT" loading="lazy">
+          <h3>Rebecca Pschibul</h3>
+          <p>Registered Massage Therapist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/counselling-corey-sleep.jpg" alt="Corey Sleep — Psychotherapist" loading="lazy">
+          <h3>Corey Sleep</h3>
+          <p>Psychotherapist</p>
+        </div>
+
+        <div class="team-member">
+          <img src="images/reflexology-katie-keyte.jpg" alt="Katie Keyte — Reflexologist" loading="lazy">
+          <h3>Katie Keyte</h3>
+          <p>Reflexologist</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Join the Team -->
+  <div class="divider"></div>
+
+  <!-- Wellness & Aesthetics -->
   <section class="section">
     <div class="container">
+      <div class="section-header fade-in">
+        <span class="label">Wellness &amp; Aesthetics</span>
+        <h2>Strength, Movement &amp; <span class="text-gradient">Aesthetic Care</span></h2>
+      </div>
+      <div class="team-grid-3 fade-in">
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
+          </div>
+          <h3>Nicole Bohnert</h3>
+          <p>Personal Trainer</p>
+        </div>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
+          </div>
+          <h3>Chadwick Brown</h3>
+          <p>Personal Trainer</p>
+        </div>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="28" cy="20" r="10"/>
+              <path d="M10 48 C10 38 18 32 28 32 C38 32 46 38 46 48"/>
+            </svg>
+          </div>
+          <h3>Alexis Smith</h3>
+          <p>Medical Aesthetician</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
       <div class="cta-banner fade-in">
-        <h2>Interested in <span class="text-gradient">Joining Our Team</span>?</h2>
-        <p>We're building the future of executive health. If you're a physician or clinical professional who shares our vision, we'd love to hear from you.</p>
-        <a href="contact.html" class="btn btn-primary">Contact Us →</a>
+        <h2>Ready to Meet <span class="text-gradient">Your Team</span>?</h2>
+        <p>Book an appointment at The Durand Clinic and experience what whole-person care truly feels like.</p>
+        <a href="https://durandhealth.janeapp.com/" class="btn btn-primary" target="_blank" rel="noopener">Book an Appointment &rarr;</a>
       </div>
     </div>
   </section>

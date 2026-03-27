@@ -34,6 +34,7 @@ function injectNav() {
                 <a href="chiropractic.html" data-page="chiropractic">Chiropractic</a>
                 <a href="naturopathic.html" data-page="naturopathic">Naturopathic Medicine</a>
                 <a href="neurofeedback.html" data-page="neurofeedback">Neurofeedback</a>
+                <a href="physiotherapy.html" data-page="physiotherapy">Physiotherapy</a>
               </div>
             </div>
           </div>

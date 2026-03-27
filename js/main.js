@@ -39,6 +39,7 @@ function injectNav() {
                 <a href="nutritional-support.html" data-page="nutritional-support">Nutritional Support &amp; Supplements</a>
                 <a href="acupuncture.html" data-page="acupuncture">Acupuncture</a>
                 <a href="registered-massage-therapy.html" data-page="registered-massage-therapy">Registered Massage Therapy</a>
+                <a href="counselling-psychotherapy.html" data-page="counselling-psychotherapy">Counselling &amp; Psychotherapy</a>
               </div>
             </div>
           </div>

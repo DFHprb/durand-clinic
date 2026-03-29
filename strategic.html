@@ -90,50 +90,20 @@ body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text)
 </style>
 </head>
 <body>
-
 <div id="gate" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#f8fafb;z-index:9999;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;">
-  <div style="text-align:center;max-width:400px;padding:2rem;">
-    <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#0d9488;margin-bottom:1rem;">Confidential</div>
-    <h2 style="font-size:1.5rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Durand® Strategic Architecture</h2>
-    <p style="color:#64748b;font-size:0.9rem;margin-bottom:1.5rem;">This document is password protected.</p>
-    <input id="pw" type="password" placeholder="Enter access code" 
-      style="width:100%;padding:0.8rem 1rem;border:1px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:inherit;outline:none;margin-bottom:0.8rem;"
-      onkeypress="if(event.key==='Enter')checkPw()">
-    <button onclick="checkPw()" 
-      style="width:100%;padding:0.8rem;background:#0d9488;color:white;border:none;border-radius:8px;font-size:0.9rem;font-weight:600;cursor:pointer;font-family:inherit;">
-      Access Document
-    </button>
-    <div id="err" style="color:#be123c;font-size:0.85rem;margin-top:0.8rem;display:none;">Incorrect access code.</div>
-  </div>
+<div style="text-align:center;max-width:360px;padding:2rem;">
+<div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#0d9488;margin-bottom:0.8rem;">Durand&reg; Future Health</div>
+<div style="font-size:1.4rem;font-weight:700;color:#0f172a;margin-bottom:0.3rem;">Confidential Document</div>
+<div style="font-size:0.85rem;color:#64748b;margin-bottom:1.5rem;">Enter access code to continue</div>
+<input id="pw" type="password" placeholder="Access code" autofocus style="width:100%;padding:0.8rem 1rem;border:1px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:'DM Sans',sans-serif;outline:none;text-align:center;" onkeydown="if(event.key==='Enter')checkPw()">
+<button onclick="checkPw()" style="margin-top:0.8rem;width:100%;padding:0.7rem;background:#0d9488;color:#fff;border:none;border-radius:8px;font-size:0.9rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">Enter</button>
+<div id="err" style="color:#be123c;font-size:0.8rem;margin-top:0.6rem;display:none;">Incorrect code.</div>
 </div>
-<script>
-function checkPw(){
-  var p=document.getElementById('pw').value;
-  if(p==='durand2026'||p==='Durand2026'||p==='DURAND2026'){
-    document.getElementById('gate').style.display='none';
-  } else {
-    document.getElementById('err').style.display='block';
-    document.getElementById('pw').style.borderColor='#be123c';
-  }
-}
-</script>
-
-
-<!-- Password Gate -->
-<div id="gate" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#f8fafb;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:'DM Sans',sans-serif;">
-  <div style="text-align:center;max-width:360px;">
-    <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#0d9488;margin-bottom:0.8rem;">Durand® Future Health</div>
-    <div style="font-size:1.4rem;font-weight:700;color:#0f172a;margin-bottom:0.3rem;">Confidential Document</div>
-    <div style="font-size:0.85rem;color:#64748b;margin-bottom:1.5rem;">Enter access code to continue</div>
-    <input id="pw" type="password" placeholder="Access code" autofocus
-      style="width:100%;padding:0.8rem 1rem;border:1px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:'DM Sans',sans-serif;outline:none;text-align:center;"
-      onkeydown="if(event.key==='Enter')checkPw()">
-    <button onclick="checkPw()"
-      style="margin-top:0.8rem;width:100%;padding:0.7rem;background:#0d9488;color:#fff;border:none;border-radius:8px;font-size:0.9rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">Enter</button>
-    <div id="err" style="color:#be123c;font-size:0.8rem;margin-top:0.6rem;display:none;">Incorrect code. Please try again.</div>
-  </div>
 </div>
 <div id="content" style="display:none;">
+<!-- Password Gate -->
+
+
 
 <div class="header">
   <div class="pill mono">Science · Privacy · Continuous Improvement</div>
@@ -311,22 +281,10 @@ function checkPw(){
 </div>
 
 <div class="footer mono">Durand® With You for Life® · Confidential · March 2026</div>
-</div><!-- end content -->
-
+</div>
 <script>
-function checkPw() {
-  if(document.getElementById('pw').value === 'DFH') {
-    document.getElementById('gate').style.display='none';
-    document.getElementById('content').style.display='block';
-  } else {
-    document.getElementById('err').style.display='block';
-    document.getElementById('pw').value='';
-    document.getElementById('pw').focus();
-  }
-}
-function toggle(el) {
-  el.classList.toggle('open');
-}
+function checkPw(){var p=document.getElementById("pw").value;if(p==="DFH"){document.getElementById("gate").style.display="none";document.getElementById("content").style.display="block";}else{document.getElementById("err").style.display="block";document.getElementById("pw").value="";}}
+function toggle(el){el.classList.toggle("open");}
 </script>
 </body>
 </html>

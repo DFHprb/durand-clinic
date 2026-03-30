@@ -44,7 +44,7 @@ function injectNav() {
               </div>
             </div>
           </div>
-          <a href="specialty.html" data-page="specialty">Specialty Programs</a>
+          <a href="team.html" data-page="team">Our Team</a>
           <a href="residential.html" data-page="residential">Nature Supported Change</a>
           <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
           <a href="contact.html" data-page="contact" class="nav-cta">Book Assessment</a>
@@ -89,7 +89,7 @@ function injectFooter() {
             <h4>Services</h4>
             <a href="index.html">Extensive Assessment</a>
             <a href="paramedical.html">Paramedical Services</a>
-            <a href="specialty.html">Specialty Programs</a>
+            <a href="team.html">Our Team</a>
             <a href="residential.html">Nature Supported Change</a>
             <a href="pricing.html">Pricing</a>
           </div>

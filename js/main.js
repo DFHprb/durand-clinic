@@ -28,7 +28,7 @@ function injectNav() {
         <div class="nav-links" id="nav-links">
           <a href="index.html" data-page="home">Extensive + Longevity</a>
           <div class="nav-dropdown-wrap">
-            <a href="paramedical.html" data-page="paramedical" class="nav-dropdown-trigger">Paramedical <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg></a>
+            <span class="nav-dropdown-trigger">Paramedical <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg></span>
             <div class="nav-dropdown-menu">
               <div class="nav-dropdown-menu-inner">
                 <a href="chiropractic.html" data-page="chiropractic">Chiropractic</a>

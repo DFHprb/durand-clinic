@@ -636,14 +636,14 @@ p {
 
 .btn-primary {
   background: var(--gradient-blue);
-  color: var(--text-primary);
+  color: #0a0e1a;
   box-shadow: var(--glow-blue);
 }
 
 .btn-primary:hover {
   box-shadow: var(--glow-strong);
   transform: translateY(-2px);
-  color: var(--text-primary);
+  color: #0a0e1a;
 }
 
 .btn-secondary {

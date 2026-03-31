@@ -1812,7 +1812,7 @@ p {
 
 .hospital-name {
   font-family: var(--font-heading);
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
   font-weight: 500;
   color: var(--text-secondary);
   white-space: nowrap;

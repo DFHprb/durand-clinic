@@ -26,7 +26,7 @@ function injectNav() {
           <span class="logo-text">The Durand <span class="highlight">Clinic</span><sup>®</sup></span>
         </a>
         <div class="nav-links" id="nav-links">
-          <a href="index.html" data-page="home">Extensive</a>
+          <a href="index.html" data-page="home">Extensive + Longevity</a>
           <div class="nav-dropdown-wrap">
             <a href="paramedical.html" data-page="paramedical" class="nav-dropdown-trigger">Paramedical <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg></a>
             <div class="nav-dropdown-menu">
@@ -47,7 +47,6 @@ function injectNav() {
           <a href="specialty.html" data-page="specialty">Specialty Programs</a>
           <a href="residential.html" data-page="residential">Nature Supported Change</a>
           <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
-          <a href="contact.html" data-page="contact" class="nav-cta">Book Assessment</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
           <span></span>

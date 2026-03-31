@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Durand® Strategic Architecture</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f8fafb; --surface: #ffffff; --border: #e2e8f0;
+  --text: #0f172a; --muted: #64748b; --subtle: #94a3b8;
+  --accent: #0d9488; --accent-bg: #f0fdfa; --accent-border: #99f6e4;
+  --gold: #b45309; --gold-bg: #fffbeb; --gold-border: #fde68a;
+  --purple: #7c3aed; --purple-bg: #f5f3ff; --purple-border: #ddd6fe;
+  --rose: #be123c; --rose-bg: #fff1f2; --rose-border: #fecdd3;
+  --blue: #2563eb; --blue-bg: #eff6ff; --blue-border: #bfdbfe;
+  --orange: #ea580c; --orange-bg: #fff7ed; --orange-border: #fed7aa;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+.mono { font-family:'JetBrains Mono',monospace; }
+
+/* Header */
+.header { text-align:center; padding:3rem 2rem 2rem; border-bottom:1px solid var(--border); background:var(--surface); }
+.header .pill { display:inline-block; padding:0.3rem 1.2rem; border-radius:99px; border:1px solid var(--accent-border); background:var(--accent-bg); color:var(--accent); font-size:0.7rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1rem; }
+.header h1 { font-size:2.2rem; font-weight:700; color:var(--text); margin-bottom:0.3rem; }
+.header h1 span { color:var(--accent); }
+.header .sub { color:var(--muted); font-size:0.95rem; }
+.header .stats { margin-top:0.8rem; font-size:0.75rem; color:var(--subtle); letter-spacing:0.1em; text-transform:uppercase; }
+.header .killshot { margin:1.5rem auto 0; max-width:700px; padding:1rem 1.5rem; border-radius:12px; background:var(--accent-bg); border:1px solid var(--accent-border); font-style:italic; color:var(--accent); font-size:0.9rem; line-height:1.5; }
+
+/* Architecture */
+.arch { max-width:1100px; margin:2rem auto; padding:0 1.5rem; }
+.arch-grid { display:grid; grid-template-columns:1fr auto 1fr; gap:1.5rem; align-items:start; }
+.col-label { font-size:0.65rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.8rem; }
+.col-label.left { color:var(--accent); }
+.col-label.right { color:var(--gold); text-align:right; }
+
+/* Engine */
+.engine { display:flex; flex-direction:column; align-items:center; justify-content:center; padding-top:3rem; }
+.engine-circle { width:120px; height:120px; border-radius:50%; border:2px solid var(--accent); display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--surface); box-shadow:0 0 30px rgba(13,148,136,0.1); }
+.engine-circle .name { font-weight:700; font-size:1.1rem; }
+.engine-circle .label { font-size:0.6rem; color:var(--accent); letter-spacing:0.15em; text-transform:uppercase; }
+.flywheel { margin-top:0.8rem; font-size:0.65rem; color:var(--subtle); text-align:center; line-height:1.8; }
+
+/* Cards */
+.cap-card, .chan-card { border:1px solid var(--border); border-radius:12px; background:var(--surface); margin-bottom:0.8rem; overflow:hidden; cursor:pointer; transition:all 0.2s; }
+.cap-card:hover, .chan-card:hover { box-shadow:0 4px 20px rgba(0,0,0,0.06); transform:translateY(-1px); }
+.card-header { display:flex; align-items:center; gap:0.6rem; padding:0.8rem 1rem; }
+.card-num { font-size:0.65rem; font-weight:600; letter-spacing:0.1em; padding:0.15rem 0.5rem; border-radius:4px; color:#fff; }
+.card-title { font-weight:600; font-size:0.9rem; flex:1; }
+.card-arrow { font-size:0.8rem; color:var(--subtle); transition:transform 0.3s; }
+.cap-card.open .card-arrow, .chan-card.open .card-arrow { transform:rotate(180deg); }
+.card-detail { display:none; padding:0 1rem 1rem; border-top:1px solid var(--border); }
+.cap-card.open .card-detail, .chan-card.open .card-detail { display:block; }
+.card-detail ul { list-style:none; padding:0.8rem 0 0; }
+.card-detail li { padding:0.4rem 0; padding-left:1.2rem; position:relative; font-size:0.85rem; color:var(--muted); line-height:1.5; }
+.card-detail li::before { content:''; position:absolute; left:0; top:0.7rem; width:6px; height:6px; border-radius:50%; }
+.card-detail .highlight { font-weight:600; color:var(--text); }
+.card-detail .anecdote { margin-top:0.6rem; padding:0.6rem 0.8rem; border-radius:8px; font-size:0.8rem; font-style:italic; line-height:1.5; }
+
+/* Color variants */
+.c-accent .card-num { background:var(--accent); } .c-accent li::before { background:var(--accent); } .c-accent .anecdote { background:var(--accent-bg); color:var(--accent); border:1px solid var(--accent-border); }
+.c-blue .card-num { background:var(--blue); } .c-blue li::before { background:var(--blue); } .c-blue .anecdote { background:var(--blue-bg); color:var(--blue); border:1px solid var(--blue-border); }
+.c-purple .card-num { background:var(--purple); } .c-purple li::before { background:var(--purple); } .c-purple .anecdote { background:var(--purple-bg); color:var(--purple); border:1px solid var(--purple-border); }
+.c-orange .card-num { background:var(--orange); } .c-orange li::before { background:var(--orange); } .c-orange .anecdote { background:var(--orange-bg); color:var(--orange); border:1px solid var(--orange-border); }
+.c-gold .card-num { background:var(--gold); } .c-gold li::before { background:var(--gold); } .c-gold .anecdote { background:var(--gold-bg); color:var(--gold); border:1px solid var(--gold-border); }
+.c-rose .card-num { background:var(--rose); } .c-rose li::before { background:var(--rose); } .c-rose .anecdote { background:var(--rose-bg); color:var(--rose); border:1px solid var(--rose-border); }
+
+/* Moats */
+.moats { max-width:1100px; margin:2rem auto; padding:0 1.5rem 3rem; }
+.moats h3 { font-size:0.65rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.8rem; }
+.moats-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:0.8rem; }
+.moat-card { padding:0.8rem; border-radius:10px; border:1px solid var(--border); background:var(--surface); }
+.moat-card .mt { font-weight:700; font-size:0.85rem; margin-bottom:0.3rem; }
+.moat-card .md { font-size:0.75rem; color:var(--muted); line-height:1.4; }
+
+/* Footer */
+.footer { text-align:center; padding:2rem; border-top:1px solid var(--border); font-size:0.7rem; color:var(--subtle); letter-spacing:0.15em; }
+
+/* Channel extras */
+.chan-card .card-header { justify-content:flex-start; }
+.chan-card .card-sub { font-size:0.7rem; margin-left:auto; padding-right:0.5rem; }
+
+@media(max-width:768px) {
+  .arch-grid { grid-template-columns:1fr; }
+  .engine { padding:1rem 0; }
+  .moats-grid { grid-template-columns:repeat(2,1fr); }
+}
+</style>
+</head>
+<body>
+<div id="gate" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#f8fafb;z-index:9999;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;">
+<div style="text-align:center;max-width:360px;padding:2rem;">
+<div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#0d9488;margin-bottom:0.8rem;">Durand&reg; Future Health</div>
+<div style="font-size:1.4rem;font-weight:700;color:#0f172a;margin-bottom:0.3rem;">Confidential Document</div>
+<div style="font-size:0.85rem;color:#64748b;margin-bottom:1.5rem;">Enter access code to continue</div>
+<input id="pw" type="password" placeholder="Access code" autofocus style="width:100%;padding:0.8rem 1rem;border:1px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:'DM Sans',sans-serif;outline:none;text-align:center;" onkeydown="if(event.key==='Enter')checkPw()">
+<button onclick="checkPw()" style="margin-top:0.8rem;width:100%;padding:0.7rem;background:#0d9488;color:#fff;border:none;border-radius:8px;font-size:0.9rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">Enter</button>
+<div id="err" style="color:#be123c;font-size:0.8rem;margin-top:0.6rem;display:none;">Incorrect code.</div>
+</div>
+</div>
+<div id="content" style="display:none;">
+<div class="header">
+  <div class="pill mono">Science · Privacy · Continuous Improvement</div>
+  <h1>Durand<span>®</span> Strategic Architecture</h1>
+  <div class="sub">The World's First Continuously Improving Health Intelligence Operating Ecosystem</div>
+  <div class="stats mono">5 Years · $5M Invested · 30+ Health Professionals</div>
+  <div class="killshot">"Every other system resets to zero at the end of the visit. Durand® is the platform that never forgets. Health intelligence that is continuous, compounding, and yours for life."</div>
+</div>
+
+<div class="arch">
+  <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+    <div class="col-label left mono">Enabling Capabilities</div>
+    <div class="col-label right mono">Value Delivery</div>
+  </div>
+  <div class="arch-grid">
+
+    <!-- LEFT: Capabilities -->
+    <div>
+      <div class="cap-card c-accent" onclick="toggle(this)">
+        <div class="card-header"><span class="card-num mono">01</span><span class="card-title">Precision Biological Sciences Institute Partnerships</span><span class="card-arrow">▼</span></div>
+        <div class="card-detail">
+          <ul>
+            <li><span class="highlight">Breast Cancer Screening Revolution:</span> JAMA-validated Tyrer-Cuzick model deployed at employer scale. Under 4% of eligible women ever get risk-based screening because the tool sits locked inside genetics clinics. McMaster calibrating for South Asian, Hispanic, Indigenous, Caribbean populations.</li>
+            <li><span class="highlight">AI Autism Early Detection:</span> Video-based AI detects neurodevelopmental signals years before clinical diagnosis. 1 in 31 children affected. $2.2B Medicaid spend with zero intelligence infrastructure. Same platform architecture, pediatric application.</li>
+            <li><span class="highlight">Kidney Disease:</span> 4M Canadians affected, 90% undiagnosed. A "silent disease" slipping people into serious illness unmonitored. Continuous biological monitoring catches what annual checkups miss.</li>
+            <li><span class="highlight">Epigenomics:</span> Biological age vs. chronological age. 40+ organ health scores from methylation patterns. Our exclusive testing panel detects disease risk years before symptoms.</li>
+            <li><span class="highlight">Proteomics (Death Scores):</span> Protein signatures predicting mortality risk. Precision risk stratification at population scale.</li>
+            <li><span class="highlight">Japan Metabo Law Partnership:</span> Japan mandates employer biological assessment at population scale. DFH is ready-made compliance infrastructure. Global research partnership opportunity to validate the platform across the world's most health-disciplined population.</li>
+          </ul>
+          <div class="anecdote">Every emerging science is evaluated against evidence-based medicine standards. What passes, integrates. What fails, gets rejected. Four times the market got duped. We didn't.</div>
+        </div>
+      </div>
+
+      <div class="cap-card c-blue" onclick="toggle(this)">
+        <div class="card-header"><span class="card-num mono">02</span><span class="card-title">Testing & Collection</span><span class="card-arrow">▼</span></div>
+        <div class="card-detail">
+          <ul>
+            <li><span class="highlight">Global exclusive multiomic testing panels</span> with MFN pricing terms. Competitors locked out.</li>
+            <li><span class="highlight">Partner lab networks</span> across Canada and the United States for scalable collection.</li>
+            <li><span class="highlight">At-home and clinic collection</span> options removing access barriers for employed populations.</li>
+            <li><span class="highlight">Fair market pricing</span> eligible for benefits coverage, not premium executive pricing.</li>
+            <li><span class="highlight">Backward integration into science:</span> Not dependent on any single vendor. Multiple lab lanes across US and Canada with proprietary IP anchors.</li>
+          </ul>
+          <div class="anecdote">Prevention was always too expensive at $5K-$15K per executive. DFH makes it accessible through employer benefits at $4.50-$5.00 PEPM.</div>
+        </div>
+      </div>
+
+      <div class="cap-card c-purple" onclick="toggle(this)">
+        <div class="card-header"><span class="card-num mono">03</span><span class="card-title">Longitudinal Health Intel Platform</span><span class="card-arrow">▼</span></div>
+        <div class="card-detail">
+          <ul>
+            <li><span class="highlight">AI health agents</span> monitoring continuously, not episodically. The system never resets to zero.</li>
+            <li><span class="highlight">Custom biological age scores</span> and AI progress reports tracking trajectory, not snapshots.</li>
+            <li><span class="highlight">30+ wearable integrations</span> operational. Nature Medicine just proved this approach predicts healthcare crises a week before they happen.</li>
+            <li><span class="highlight">Full EHR connectivity</span> with enterprise audit trail. Connected to thousands of medical clinics.</li>
+            <li><span class="highlight">Compounding intelligence:</span> A biomarker at 60 months is an order of magnitude more valuable than at day one. The finish line moves away from competitors faster than they can run toward it.</li>
+          </ul>
+          <div class="anecdote">TRUE-HF studied 1 biomarker, 1 condition, 1 device. DFH integrates multiomic panels, metabolic markers, genomic signals, and dozens of wearable streams across all chronic conditions.</div>
+        </div>
+      </div>
+
+      <div class="cap-card c-orange" onclick="toggle(this)">
+        <div class="card-header"><span class="card-num mono">04</span><span class="card-title">Behavioral Intelligence & Modification</span><span class="card-arrow">▼</span></div>
+        <div class="card-detail">
+          <ul>
+            <li><span class="highlight">The trillion-dollar gap</span> every competitor ignores. The data goes in. Nothing comes out.</li>
+            <li><span class="highlight">AI behavioral nudges</span> calibrated to psychology, not just data dashboards. Trauma-aware. Meets people where they are.</li>
+            <li><span class="highlight">Continuous loops</span> that persist long enough for behavioral change to take root. Longitudinal means the relationship never walks away.</li>
+            <li><span class="highlight">Not a notification.</span> A stressed, overwhelmed person doesn't change because someone showed them a blood panel. They change because something meets them continuously with intelligence and empathy.</li>
+          </ul>
+          <div class="anecdote">Every wellness app, every step counter, every annual physical fails at the same point: the moment the human being has to change their behavior. Only a longitudinal platform can close this loop.</div>
+        </div>
+      </div>
+
+      <div class="cap-card c-gold" onclick="toggle(this)">
+        <div class="card-header"><span class="card-num mono">05</span><span class="card-title">Care Navigation & Partnerships</span><span class="card-arrow">▼</span></div>
+        <div class="card-detail">
+          <ul>
+            <li><span class="highlight">White-label national EAP+ partner</span> in Canada. DFH doesn't build call centres. It orchestrates.</li>
+            <li><span class="highlight">US telehealth fulfillment:</span> Wheel, OpenLoop for virtual physician access. Carenet for EHAP navigation.</li>
+            <li><span class="highlight">Maple / Teladoc</span> for Canadian same-day telehealth with full biological history.</li>
+            <li><span class="highlight">Fulfillment layer</span> closes the loop between signal detection and clinical intervention. Same day, not three weeks.</li>
+            <li><span class="highlight">Enterprise audit trail</span> proving interventions happened and outcomes were measured.</li>
+          </ul>
+          <div class="anecdote">When a pre-disease signal is detected, the individual doesn't go to the ER. They receive same-day telehealth from a clinician who has their full biological history already in front of them.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER: Engine -->
+    <div class="engine">
+      <div class="engine-circle">
+        <div class="name">Durand</div>
+        <div class="label mono">Engine</div>
+      </div>
+      <div class="flywheel mono">
+        Signals →<br>Interventions →<br>Outcomes →<br>Learn
+      </div>
+    </div>
+
+    <!-- RIGHT: Channels -->
+    <div>
+      <div class="chan-card c-accent" onclick="toggle(this)">
+        <div class="card-header"><span class="card-num mono">P1</span><span class="card-title">Employers & Employees</span><span class="card-sub mono" style="color:var(--accent)">14M+ lives</span><span class="card-arrow">▼</span></div>
+        <div class="card-detail">
+          <ul>
+            <li><span class="highlight">Break-fix model is breaking:</span> 10%+ annual cost increases. $1.2T in lost productivity. 51% of large employers actively switching wellness vendors right now.</li>
+            <li><span class="highlight">EHAP replaces hated EAP</span> at the same PEPM. Zero incremental cost to employer. $4.50-$5.00 PEPM. $1.09 CAC through broker channel.</li>
+            <li><span class="highlight">Pipeline:</span> Lawrie Group 54K committed, HUB International 500K+, Rad Collective 105 brokers across 30 firms, Keiretsu Forum deep dive completed.</li>
+            <li><span class="highlight">Break-even at 50,000 lives.</span> 14M+ in total pipeline. Once embedded, switching costs are enormous. Palantir / Toast / Veeva playbook.</li>
+            <li><span class="highlight">LTV:CAC of 248:1.</span> $270 lifetime value on $1.09 acquisition cost. 65% gross margin at launch, expanding to 75-80%.</li>
+          </ul>
+          <div class="anecdote">87% of benefits leaders say they need ROI proof. Nobody provides it. DFH creates closed-loop measurement: biological baseline → intervention → outcome.</div>
+        </div>
+      </div>
+
+      <div class="chan-card c-gold" onclick="toggle(this)">
+        <div class="card-header"><span class="card-num mono">P2</span><span class="card-title">Population Health / Governments</span><span class="card-sub mono" style="color:var(--gold)">15M lives</span><span class="card-arrow">▼</span></div>
+        <div class="card-detail">
+          <ul>
+            <li><span class="highlight">Ontario crisis confirmed today:</span> 100+ hospitals in deficit. $1.8B working capital shortfall. 700 nursing positions eliminated. "The system is grinding to a halt." (OHA President, Globe and Mail March 2026)</li>
+            <li><span class="highlight">3.1M Ontarians</span> expected to be living with a major illness by 2040, up from 1.8M in 2020. The demand wave is coming and there is no supply-side solution.</li>
+            <li><span class="highlight">4M Canadians with kidney disease, 90% undiagnosed.</span> Countless lives slipping into serious disease unmonitored. This is just one condition.</li>
+            <li><span class="highlight">Diversion math:</span> 50K monitored lives. 8-12% pre-disease signals annually. 1,500-4,000 ER visits avoided. $1.5-4M saved per cohort. No new ER wing. No new nurses. The problem deflated.</li>
+            <li><span class="highlight">Ontario POC planned Spring 2026.</span> Tim Hudak retained for Minister Jones strategy. Hamilton as demonstration site.</li>
+            <li><span class="highlight">Governments spent $20B+ trying to build health platforms.</span> eHealth Ontario, Healthcare.gov, NHS Connecting for Health. All failed. Government is DFH's future customer, not its competitor.</li>
+          </ul>
+          <div class="anecdote">"We're going to have more people that need hospital care than we ever have experienced in this province." Prof. Laura Rosella, U of T (OHA-commissioned research)</div>
+        </div>
+      </div>
+
+      <div class="chan-card c-purple" onclick="toggle(this)">
+        <div class="card-header"><span class="card-num mono">P3</span><span class="card-title">Insurance & Payors</span><span class="card-sub mono" style="color:var(--purple)">1M+ lives</span><span class="card-arrow">▼</span></div>
+        <div class="card-detail">
+          <ul>
+            <li><span class="highlight">Insurers are pricing blind.</span> Rising LTD claims with no predictive tools. Still using backward-looking claims data to make forward-looking decisions.</li>
+            <li><span class="highlight">The Vitality Model:</span> Discovery/John Hancock proved behavior-linked premiums work. But they run on step counters, not biological intelligence. DFH is the intelligence layer Vitality never had.</li>
+            <li><span class="highlight">The Payvider Model:</span> Insurers becoming providers. Providers becoming insurers. DFH is the intelligence backbone that powers this convergence with longitudinal biological data.</li>
+            <li><span class="highlight">The Alan Model:</span> Digital-native insurance displacing legacy carriers. But Alan has no health intelligence backbone. DFH provides it.</li>
+            <li><span class="highlight">Empire Life:</span> 1M+ lives, escalator pricing confirmed. Dara Brakman assigned as internal quarterback. If DFH demonstrates continuously monitored populations generate fewer LTD claims, the conversation shifts from product interest to actuarially significant risk reduction.</li>
+            <li><span class="highlight">GreenShield:</span> Denise Richardson (VP Commercial), Matt Parks (Products) actively engaged. GreenShield is the primary Canadian GTM partner path.</li>
+          </ul>
+          <div class="anecdote">Private insurers are not leveraging the information available to them to reduce claims proactively. DFH transforms their data from a rearview mirror into a windshield.</div>
+        </div>
+      </div>
+
+      <div class="chan-card c-rose" onclick="toggle(this)">
+        <div class="card-header"><span class="card-num mono">P4</span><span class="card-title">Clinical Partnerships</span><span class="card-sub mono" style="color:var(--rose)">2.5M lives</span><span class="card-arrow">▼</span></div>
+        <div class="card-detail">
+          <ul>
+            <li><span class="highlight">Clinics are drowning in data</span> they cannot curate, manage, or act on. No ability to bill or execute easily. Durand orchestrates it through one platform.</li>
+            <li><span class="highlight">Premier Tier:</span> Executive longevity clinic-in-a-box for C-suite and UHNW clients. Niagara Hospital as early adopter. St. Joseph's Hamilton partnership advancing.</li>
+            <li><span class="highlight">Population Tier:</span> Public and private clinic/hospital partners with Durand Hybrid Care model. Layers platform intelligence onto existing infrastructure.</li>
+            <li><span class="highlight">Clinic Accelerator:</span> 1,000+ clinic clients as target network. Estimated 2.5M lives through clinic distribution channel.</li>
+            <li><span class="highlight">Epic hospital systems:</span> US expansion target. Thousands of US clinics running Epic represent a massive deployment path.</li>
+            <li><span class="highlight">Hybrid Care Architecture:</span> Three lanes (clinic anchor + AI platform + telehealth). Six-step compounding loop. China proved this model at 400M lives. DFH improves it with genuine longitudinal data and EBM credibility.</li>
+          </ul>
+          <div class="anecdote">China's Ping An and WeDoctor understood that trust requires physical presence. DFH built the clinical anchor over five years before anyone articulated the strategic logic of why it was necessary.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Moats -->
+<div class="moats">
+  <h3 class="mono">Strategic Moats & Compounding Advantages</h3>
+  <div class="moats-grid">
+    <div class="moat-card"><div class="mt">AI-First Platform</div><div class="md">Precision medicine enabled by AI as medical knowledge doubles every 72 days. No human can keep up manually.</div></div>
+    <div class="moat-card"><div class="mt">Secure by Design</div><div class="md">Employee data never resold. Walled garden protecting what becomes one of the world's largest biological databases.</div></div>
+    <div class="moat-card"><div class="mt">China Proved It</div><div class="md">400M lives on hybrid care model. DFH improves it with genuine longitudinal data and EBM credibility the West trusts.</div></div>
+    <div class="moat-card"><div class="mt">Gov'ts Spent $20B+</div><div class="md">All failed. eHealth Ontario, Healthcare.gov, NHS. Government is DFH's future customer, not competitor.</div></div>
+    <div class="moat-card"><div class="mt">First-Mover: Time x AI</div><div class="md">5 years + $5M. Every day the moat widens. They can buy technology. They cannot buy time.</div></div>
+  </div>
+</div>
+
+<div class="footer mono">Durand® With You for Life® · Confidential · March 2026</div>
+</div>
+<script>
+function checkPw(){
+  if(document.getElementById('pw').value==='DFH'){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('content').style.display='block';
+  } else {
+    document.getElementById('err').style.display='block';
+    document.getElementById('pw').value='';
+    document.getElementById('pw').focus();
+  }
+}
+function toggle(el){el.classList.toggle('open');}
+</script>
+</body>
+</html>

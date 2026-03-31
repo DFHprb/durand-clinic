@@ -31,16 +31,16 @@ function injectNav() {
             <span class="nav-dropdown-trigger">Paramedical <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg></span>
             <div class="nav-dropdown-menu">
               <div class="nav-dropdown-menu-inner">
+                <a href="acupuncture.html" data-page="acupuncture">Acupuncture</a>
                 <a href="chiropractic.html" data-page="chiropractic">Chiropractic</a>
+                <a href="counselling-psychotherapy.html" data-page="counselling-psychotherapy">Counselling &amp; Psychotherapy</a>
                 <a href="naturopathic.html" data-page="naturopathic">Naturopathic Medicine</a>
                 <a href="neurofeedback.html" data-page="neurofeedback">Neurofeedback</a>
-                <a href="physiotherapy.html" data-page="physiotherapy">Physiotherapy</a>
-                <a href="traditional-chinese-medicine.html" data-page="traditional-chinese-medicine">Traditional Chinese Medicine</a>
                 <a href="nutritional-support.html" data-page="nutritional-support">Nutritional Support &amp; Supplements</a>
-                <a href="acupuncture.html" data-page="acupuncture">Acupuncture</a>
-                <a href="registered-massage-therapy.html" data-page="registered-massage-therapy">Registered Massage Therapy</a>
-                <a href="counselling-psychotherapy.html" data-page="counselling-psychotherapy">Counselling &amp; Psychotherapy</a>
+                <a href="physiotherapy.html" data-page="physiotherapy">Physiotherapy</a>
                 <a href="reflexology-lymphatic-drainage.html" data-page="reflexology-lymphatic-drainage">Reflexology &amp; Lymphatic Drainage</a>
+                <a href="registered-massage-therapy.html" data-page="registered-massage-therapy">Registered Massage Therapy</a>
+                <a href="traditional-chinese-medicine.html" data-page="traditional-chinese-medicine">Traditional Chinese Medicine</a>
               </div>
             </div>
           </div>

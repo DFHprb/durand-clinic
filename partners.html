@@ -294,6 +294,9 @@
 
       <div style="max-width:700px;margin:0 auto;" class="fade-in">
         <form id="enquiry-form" onsubmit="handleEnquirySubmit(event)">
+            <input type="hidden" name="access_key" value="592bd7ab-c1ea-4228-ac89-d04c96863a82">
+            <input type="hidden" name="subject" value="New Partner Enquiry — The Durand Clinic">
+            <input type="checkbox" name="botcheck" style="display:none;">
           <div class="form-grid">
             <div class="form-group">
               <label for="firstName">First Name *</label>
@@ -365,23 +368,27 @@
   <div id="footer-placeholder"></div>
   <script src="js/main.js"></script>
   <script>
-    function handleEnquirySubmit(e) {
+    async function handleEnquirySubmit(e) {
       e.preventDefault();
-      var form = document.getElementById('enquiry-form');
-      var data = new FormData(form);
-      var subject = encodeURIComponent('Durand Clinic Global Enquiry — ' + (data.get('organization') || 'New Enquiry'));
-      var body = encodeURIComponent(
-        'Name: ' + data.get('firstName') + ' ' + data.get('lastName') + '\n' +
-        'Email: ' + data.get('email') + '\n' +
-        'Phone: ' + (data.get('phone') || 'Not provided') + '\n' +
-        'Organization: ' + data.get('organization') + '\n' +
-        'Country: ' + data.get('country') + '\n' +
-        'Enquiry Type: ' + (data.get('enquiryType') || 'Not specified') + '\n\n' +
-        'Message:\n' + data.get('message')
-      );
-      window.open('mailto:info@durandhealth.com?subject=' + subject + '&body=' + body, '_self');
-      form.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
+      const form = document.getElementById('enquiry-form');
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        btn.textContent = 'Submit Enquiry →';
+        btn.disabled = false;
+        alert('Something went wrong. Please email us directly at info@durandhealth.com');
+      }
     }
   </script>
 </body>

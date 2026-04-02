@@ -396,6 +396,53 @@ p {
   background: rgba(0, 229, 255, 0.05);
 }
 
+/* --- Scroll Banner --- */
+.scroll-banner {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  z-index: 998;
+  height: 36px;
+  overflow: hidden;
+  background: rgba(0, 8, 20, 0.97);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.12);
+  display: flex;
+  align-items: center;
+}
+
+.scroll-banner-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ticker 40s linear infinite;
+}
+
+.scroll-banner-track span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 0 28px;
+}
+
+.scroll-banner-track .ticker-sep {
+  color: var(--accent-cyan);
+  font-size: 0.45rem;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.has-scroll-banner .page-hero {
+  padding-top: calc(var(--nav-height) + 36px + 80px);
+}
+
 /* --- Nav Dropdown --- */
 .nav-dropdown-wrap {
   position: relative;

@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   injectNav();
   injectFooter();
+  injectScrollBanner();
   initMobileMenu();
   initScrollEffects();
   initFaqAccordion();
@@ -56,6 +57,32 @@ function injectNav() {
       </div>
     </nav>
   `;
+}
+
+/* --- Scroll Banner (paramedical pages only) --- */
+function injectScrollBanner() {
+  const paramedicalPages = ['acupuncture','chiropractic','counselling-psychotherapy','naturopathic','neurofeedback','nutritional-support','physiotherapy','reflexology-lymphatic-drainage','registered-massage-therapy','traditional-chinese-medicine'];
+  const page = document.body.dataset.page;
+  if (!paramedicalPages.includes(page)) return;
+
+  document.body.classList.add('has-scroll-banner');
+
+  const items = [
+    'Free On-Site Parking',
+    'James Street South &mdash; Hamilton',
+    'Direct Billing Available',
+    'Physician-Referred &amp; Self-Referred Welcome',
+    'HST Receipts Provided',
+    'Open Monday &ndash; Saturday',
+  ];
+
+  const sep = '<span class="ticker-sep">◆</span>';
+  const content = items.map(i => `<span>${i}</span>${sep}`).join('');
+
+  const banner = document.createElement('div');
+  banner.className = 'scroll-banner';
+  banner.innerHTML = `<div class="scroll-banner-track">${content}${content}</div>`;
+  document.body.appendChild(banner);
 }
 
 /* --- Footer Injection --- */

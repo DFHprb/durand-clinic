@@ -124,6 +124,13 @@ function initMobileMenu() {
       return;
     }
 
+    // Toggle paramedical dropdown on mobile
+    const dropdownTrigger = e.target.closest('.nav-dropdown-trigger');
+    if (dropdownTrigger && window.innerWidth <= 768) {
+      dropdownTrigger.closest('.nav-dropdown-wrap').classList.toggle('open');
+      return;
+    }
+
     // Close menu when clicking a nav link
     const navLink = e.target.closest('.nav-links a');
     if (navLink) {

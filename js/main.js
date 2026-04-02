@@ -23,7 +23,7 @@ function injectNav() {
     <nav class="nav" id="main-nav">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo">
-          <div class="logo-icon"><img src="images/durand-icon.png" alt="" style="width:32px;height:32px;object-fit:contain;display:block;transform:translateY(-1px) translateX(2px);"></div>
+          <div class="logo-icon"><img src="images/durand-icon.png" alt="" style="width:32px;height:32px;object-fit:contain;display:block;transform:translateY(-1px) translateX(1px);"></div>
           <span class="logo-text">The Durand <span class="highlight">Clinic</span><sup>®</sup></span>
         </a>
         <div class="nav-links" id="nav-links">
@@ -107,7 +107,7 @@ function injectFooter() {
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
-              <div class="logo-icon"><img src="images/durand-icon.png" alt="" style="width:32px;height:32px;object-fit:contain;display:block;transform:translateY(-1px) translateX(2px);"></div>
+              <div class="logo-icon"><img src="images/durand-icon.png" alt="" style="width:32px;height:32px;object-fit:contain;display:block;transform:translateY(-1px) translateX(1px);"></div>
               <span class="logo-text">The Durand <span class="highlight">Clinic</span><sup>®</sup></span>
             </a>
             <p>${brandLine}</p>

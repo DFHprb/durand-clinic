@@ -398,14 +398,11 @@ p {
 
 /* --- Scroll Banner --- */
 .scroll-banner {
-  position: fixed;
-  top: var(--nav-height);
-  left: 0;
-  right: 0;
-  z-index: 998;
+  width: 100%;
   height: 36px;
   overflow: hidden;
   background: rgba(0, 8, 20, 0.97);
+  border-top: 1px solid rgba(0, 229, 255, 0.12);
   border-bottom: 1px solid rgba(0, 229, 255, 0.12);
   display: flex;
   align-items: center;
@@ -439,9 +436,6 @@ p {
   to   { transform: translateX(-50%); }
 }
 
-.has-scroll-banner .page-hero {
-  padding-top: calc(var(--nav-height) + 36px + 80px);
-}
 
 /* --- Nav Dropdown --- */
 .nav-dropdown-wrap {

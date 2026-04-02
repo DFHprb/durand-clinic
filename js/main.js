@@ -65,8 +65,6 @@ function injectScrollBanner() {
   const page = document.body.dataset.page;
   if (!paramedicalPages.includes(page)) return;
 
-  document.body.classList.add('has-scroll-banner');
-
   const items = [
     'Free On-Site Parking',
     'James Street South &mdash; Hamilton',
@@ -81,7 +79,11 @@ function injectScrollBanner() {
   const banner = document.createElement('div');
   banner.className = 'scroll-banner';
   banner.innerHTML = `<div class="scroll-banner-track">${content}${content}</div>`;
-  document.body.appendChild(banner);
+
+  const pageHero = document.querySelector('.page-hero');
+  if (pageHero) {
+    pageHero.insertAdjacentElement('afterend', banner);
+  }
 }
 
 /* --- Footer Injection --- */

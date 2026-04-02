@@ -1931,6 +1931,10 @@ p {
     min-width: unset;
   }
 
+  .nav-dropdown-wrap:hover .nav-dropdown-menu {
+    display: none;
+  }
+
   .nav-dropdown-wrap.open .nav-dropdown-menu {
     display: block;
   }

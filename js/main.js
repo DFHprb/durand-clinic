@@ -73,7 +73,6 @@ function injectScrollBanner() {
     'Direct Billing Available',
     'Physician-Referred &amp; Self-Referred Welcome',
     'HST Receipts Provided',
-    'Open Monday &ndash; Saturday',
   ];
 
   const sep = '<span class="ticker-sep">◆</span>';

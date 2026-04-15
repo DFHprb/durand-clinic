@@ -174,6 +174,15 @@ durand-clinic/
 
 **VOICE:** Authoritative, restrained, science-literate, not alarmist, not hype-y. Think *The Atlantic meets JAMA*. Concise sentences. Cite sources. Acknowledge uncertainty when real.
 
+**PERSONALITY vs SCIENCE (strict editorial principle, decided 2026-04-15):**
+- We are a **science-first, future-focused** brand. We do NOT build founder personality cults or clinician celebrity.
+- **No founder hero videos.** No "meet the founder" content series. No founder-as-influencer.
+- The founder's voice lives in ONE place: the written `founder-message.html` page on the site. That's it.
+- Occasional founder LinkedIn text posts are fine (strategic commentary), but the brand is never about the person.
+- Clinicians appear as experts commenting on research, NOT as personalities.
+- Every piece of content should answer: *"Does this advance the science story, or the person story?"* If it's the person story — rethink it.
+- This is the opposite of most clinic marketing, and that's the point.
+
 **PUBLISHING CADENCE (initial target):** 2-3 pieces per week across channels. Paven personally sources leading-edge health news; Claude drafts; Paven + clinicians review.
 
 **CHANNELS (priority):**

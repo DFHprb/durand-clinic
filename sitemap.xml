@@ -56,6 +56,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Priority 0.8 — Insights hub (SEO content engine) -->
+  <url>
+    <loc>https://durand.clinic/insights.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/insights/why-your-biological-age-is-out-of-date.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Priority 0.7 — Trust / credibility -->
   <url>
     <loc>https://durand.clinic/about.html</loc>

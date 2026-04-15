@@ -47,6 +47,7 @@ function injectNav() {
           </div>
           <a href="specialty.html" data-page="specialty">Specialty Programs</a>
           <a href="residential.html" data-page="residential">Nature Supported Change</a>
+          <a href="insights.html" data-page="insights">Insights</a>
           <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">

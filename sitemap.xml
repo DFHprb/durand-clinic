@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Priority 1.0 — Homepage -->
+  <url>
+    <loc>https://durand.clinic/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Priority 0.9 — Core revenue pages (Executive Health + Longevity + Residential) -->
+  <url>
+    <loc>https://durand.clinic/services.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/specialty.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/residential.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/pricing.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Priority 0.8 — Conversion pages -->
+  <url>
+    <loc>https://durand.clinic/contact.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/enquiry.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/founder-message.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Priority 0.7 — Trust / credibility -->
+  <url>
+    <loc>https://durand.clinic/about.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/team.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/partners.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/faq.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/strategic.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Priority 0.6 — Residential language variants (global clinic enquiries track) -->
+  <url>
+    <loc>https://durand.clinic/residential-ar.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://durand.clinic/residential-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/residential.html"/>
+  </url>
+  <url>
+    <loc>https://durand.clinic/residential-zh.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://durand.clinic/residential-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/residential.html"/>
+  </url>
+  <url>
+    <loc>https://durand.clinic/residential-de.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://durand.clinic/residential-de.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/residential.html"/>
+  </url>
+  <url>
+    <loc>https://durand.clinic/residential-fr.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://durand.clinic/residential-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/residential.html"/>
+  </url>
+  <url>
+    <loc>https://durand.clinic/residential-hi.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://durand.clinic/residential-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/residential.html"/>
+  </url>
+  <url>
+    <loc>https://durand.clinic/residential-it.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://durand.clinic/residential-it.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/residential.html"/>
+  </url>
+  <url>
+    <loc>https://durand.clinic/residential-nl.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://durand.clinic/residential-nl.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/residential.html"/>
+  </url>
+
+  <!-- Priority 0.5 — Paramedical services (optional, de-emphasized) -->
+  <url>
+    <loc>https://durand.clinic/paramedical.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/acupuncture.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/chiropractic.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/counselling-psychotherapy.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/naturopathic.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/neurofeedback.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/nutritional-support.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/physiotherapy.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/reflexology-lymphatic-drainage.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/registered-massage-therapy.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://durand.clinic/traditional-chinese-medicine.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

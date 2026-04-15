@@ -1,0 +1,24 @@
+# The Durand Clinic — robots.txt
+# https://durand.clinic
+
+User-agent: *
+Allow: /
+
+# AI crawlers — allow (good for brand visibility in AI answers)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Disallow preview/dev environments
+User-agent: *
+Disallow: /*.vercel.app/
+
+Sitemap: https://durand.clinic/sitemap.xml

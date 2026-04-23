@@ -319,7 +319,7 @@ function initHeroCarousel() {
   function prev() { goTo(current - 1); }
 
   function startTimer() {
-    timer = setInterval(next, 6000);
+    timer = setInterval(next, 10000);
   }
 
   function resetTimer() {

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   setActiveNav();
   initLanguageSelector();
+  initHeroCarousel();
 });
 
 /* --- Navigation Injection --- */
@@ -295,6 +296,49 @@ function initLanguageSelector() {
       selector.classList.remove('open');
     });
   }, 20);
+}
+
+/* --- Hero Carousel --- */
+function initHeroCarousel() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startTimer() {
+    timer = setInterval(next, 6000);
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    startTimer();
+  }
+
+  document.querySelector('.carousel-next')?.addEventListener('click', () => { next(); resetTimer(); });
+  document.querySelector('.carousel-prev')?.addEventListener('click', () => { prev(); resetTimer(); });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); resetTimer(); });
+  });
+
+  const carousel = document.querySelector('.hero-carousel');
+  carousel?.addEventListener('mouseenter', () => clearInterval(timer));
+  carousel?.addEventListener('mouseleave', startTimer);
+
+  startTimer();
 }
 
 /* --- Smooth counter animation --- */

@@ -95,13 +95,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://durand.clinic/strategic.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- Priority 0.6 — Residential language variants (global clinic enquiries track) -->
   <url>
     <loc>https://durand.clinic/residential-ar.html</loc>

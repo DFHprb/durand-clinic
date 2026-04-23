@@ -47,7 +47,6 @@ function injectNav() {
           </div>
           <a href="specialty.html" data-page="specialty">Specialty Programs</a>
           <a href="residential.html" data-page="residential">Nature Supported Change</a>
-          <a href="insights.html" data-page="insights">Insights</a>
           <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
@@ -124,6 +123,7 @@ function injectFooter() {
           <div class="footer-col">
             <h4>Company</h4>
             <a href="about.html">About Us</a>
+            <a href="insights.html">Insights</a>
             <a href="faq.html">FAQ</a>
             <a href="partners.html">Global Partner Enquiries</a>
           </div>

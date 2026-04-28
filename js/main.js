@@ -69,10 +69,10 @@ function injectScrollBanner() {
 
   const items = [
     'Free On-Site Parking',
-    'James Street South &mdash; Hamilton',
+    'South Downtown &mdash; Hamilton',
     'Direct Billing Available',
     'Physician-Referred &amp; Self-Referred Welcome',
-    'HST Receipts Provided',
+    'Collaborative Care',
   ];
 
   const sep = '<span class="ticker-sep">◆</span>';

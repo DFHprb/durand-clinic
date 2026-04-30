@@ -134,6 +134,7 @@ function injectFooter() {
             <a href="contact.html">Book Assessment</a>
             <a href="mailto:info@durandhealth.com">info@durandhealth.com</a>
             <a href="contact.html">Contact Us</a>
+            <a href="team.html">Meet the Team</a>
           </div>
         </div>
         <div class="footer-bottom">

@@ -28,7 +28,7 @@ function injectNav() {
           <span class="logo-text">The Durand <span class="highlight">Clinic</span><sup>®</sup></span>
         </a>
         <div class="nav-links" id="nav-links">
-          <a href="index.html" data-page="home">Extensive + Longevity</a>
+          <a href="executive-health.html" data-page="executive-health">Extensive + Longevity</a>
           <div class="nav-dropdown-wrap">
             <span class="nav-dropdown-trigger">Treatment Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg></span>
             <div class="nav-dropdown-menu">
@@ -116,7 +116,7 @@ function injectFooter() {
           </div>
           <div class="footer-col">
             <h4>Services</h4>
-            <a href="index.html">Extensive Assessment</a>
+            <a href="executive-health.html">Extensive Assessment</a>
             <a href="paramedical.html">Paramedical Services</a>
             <a href="specialty.html">Specialty Programs</a>
             <a href="residential.html">Nature Supported Change</a>

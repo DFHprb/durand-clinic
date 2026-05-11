@@ -153,6 +153,7 @@
       .home-banner {
         padding: 100px 0 72px;
       }
+      .quick-links-grid { grid-template-columns: 1fr !important; }
       .home-split {
         flex-direction: column;
         min-height: auto;
@@ -218,6 +219,60 @@
     </a>
 
   </div>
+
+  <!-- Quick Links -->
+  <section style="background:var(--bg-secondary);padding:72px 0;">
+    <div class="container">
+      <div class="quick-links-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+        <!-- Meet the Team -->
+        <div class="card" style="text-align:center;padding:48px 36px;">
+          <div style="margin-bottom:28px;">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="26" cy="18" r="8"/>
+              <path d="M10 44 C10 35.2 17.2 28 26 28 C34.8 28 42 35.2 42 44"/>
+            </svg>
+          </div>
+          <h3 style="font-size:1.4rem;margin-bottom:12px;">Meet the Team</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:28px;">Get to know our physicians, specialists, and paramedical practitioners.</p>
+          <a href="team.html" class="btn btn-outline">View the Team &rarr;</a>
+        </div>
+
+        <!-- Appointments -->
+        <div class="card" style="text-align:center;padding:48px 36px;">
+          <div style="margin-bottom:28px;">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="12" width="36" height="34" rx="3"/>
+              <line x1="8" y1="22" x2="44" y2="22"/>
+              <line x1="17" y1="6" x2="17" y2="18"/>
+              <line x1="35" y1="6" x2="35" y2="18"/>
+              <line x1="18" y1="32" x2="26" y2="32"/>
+              <line x1="26" y1="32" x2="26" y2="40"/>
+              <line x1="18" y1="40" x2="34" y2="40"/>
+            </svg>
+          </div>
+          <h3 style="font-size:1.4rem;margin-bottom:12px;">Appointments</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:28px;">Book your assessment or treatment appointment online — quick and easy.</p>
+          <a href="https://durandhealth.janeapp.com/" class="btn btn-primary" target="_blank" rel="noopener">Book Now &rarr;</a>
+        </div>
+
+        <!-- Connect with Us -->
+        <div class="card" style="text-align:center;padding:48px 36px;">
+          <div style="margin-bottom:28px;">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 10 C8 8.9 8.9 8 10 8 L42 8 C43.1 8 44 8.9 44 10 L44 34 C44 35.1 43.1 36 42 36 L28 36 L20 44 L20 36 L10 36 C8.9 36 8 35.1 8 34 Z"/>
+              <line x1="17" y1="20" x2="35" y2="20"/>
+              <line x1="17" y1="27" x2="28" y2="27"/>
+            </svg>
+          </div>
+          <h3 style="font-size:1.4rem;margin-bottom:12px;">Connect with Us</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:28px;">Have a question or want to learn more? We'd love to hear from you.</p>
+          <a href="contact.html" class="btn btn-outline">Get in Touch &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <div id="footer-placeholder"></div>

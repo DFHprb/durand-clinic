@@ -161,7 +161,7 @@
 
   <!-- Priority 0.5 — Paramedical services (optional, de-emphasized) -->
   <url>
-    <loc>https://durand.clinic/paramedical.html</loc>
+    <loc>https://durand.clinic/treatment-services</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

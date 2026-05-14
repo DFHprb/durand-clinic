@@ -42,6 +42,8 @@
     { "source": "/(.*)", "has": [{ "type": "host", "value": "www.durandhealth.com" }], "destination": "https://durand.clinic/$1", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/index", "destination": "/", "permanent": true },
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/paramedical", "destination": "/treatment-services", "permanent": true },
+    { "source": "/paramedical.html", "destination": "/treatment-services", "permanent": true }
   ]
 }

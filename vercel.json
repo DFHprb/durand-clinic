@@ -44,6 +44,15 @@
     { "source": "/index", "destination": "/", "permanent": true },
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/paramedical", "destination": "/treatment-services", "permanent": true },
-    { "source": "/paramedical.html", "destination": "/treatment-services", "permanent": true }
+    { "source": "/paramedical.html", "destination": "/treatment-services", "permanent": true },
+    { "source": "/residential", "destination": "/renewal", "permanent": true },
+    { "source": "/residential.html", "destination": "/renewal", "permanent": true },
+    { "source": "/residential-fr", "destination": "/renewal-fr", "permanent": true },
+    { "source": "/residential-de", "destination": "/renewal-de", "permanent": true },
+    { "source": "/residential-it", "destination": "/renewal-it", "permanent": true },
+    { "source": "/residential-nl", "destination": "/renewal-nl", "permanent": true },
+    { "source": "/residential-zh", "destination": "/renewal-zh", "permanent": true },
+    { "source": "/residential-hi", "destination": "/renewal-hi", "permanent": true },
+    { "source": "/residential-ar", "destination": "/renewal-ar", "permanent": true }
   ]
 }

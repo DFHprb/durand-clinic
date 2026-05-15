@@ -47,7 +47,7 @@ function injectNav() {
             </div>
           </div>
           <a href="specialty.html" data-page="specialty">Specialty Programs</a>
-          <a href="residential.html" data-page="residential">Nature Supported Change</a>
+          <a href="renewal.html" data-page="renewal">Nature Supported Change</a>
           <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
         </div>
         <a href="contact.html" class="btn btn-primary" style="font-size:0.85rem;padding:8px 20px;margin-left:8px;white-space:nowrap;">Contact Us</a>
@@ -95,7 +95,7 @@ function injectFooter() {
 
   const year = new Date().getFullYear();
   const page = document.body.dataset.page;
-  const isResidential = page === 'residential';
+  const isResidential = page === 'renewal';
   const brandLine = isResidential
     ? 'Nature-grounded behavioural health, longevity testing, and ongoing health intelligence. Redefining residential recovery.'
     : 'The most advanced executive health assessment combined with longevity testing and year-round health intelligence. Redefining what it means to know your health.';
@@ -119,7 +119,7 @@ function injectFooter() {
             <a href="executive-health.html">Extensive Assessment</a>
             <a href="treatment-services.html">Treatment Services</a>
             <a href="specialty.html">Specialty Programs</a>
-            <a href="residential.html">Nature Supported Change</a>
+            <a href="renewal.html">Nature Supported Change</a>
             <a href="pricing.html">Pricing</a>
           </div>
           <div class="footer-col">
@@ -243,19 +243,19 @@ function setActiveNav() {
 /* --- Language Selector --- */
 function initLanguageSelector() {
   const page = document.body.dataset.page;
-  if (page !== 'residential') return;
+  if (page !== 'renewal') return;
 
   // Determine current language from html lang attribute
   const lang = document.documentElement.lang || 'en';
   const languages = [
-    { code: 'en', label: 'English', file: 'residential.html' },
-    { code: 'fr', label: 'Français', file: 'residential-fr.html' },
-    { code: 'de', label: 'Deutsch', file: 'residential-de.html' },
-    { code: 'it', label: 'Italiano', file: 'residential-it.html' },
-    { code: 'nl', label: 'Nederlands', file: 'residential-nl.html' },
-    { code: 'zh', label: '中文', file: 'residential-zh.html' },
-    { code: 'hi', label: 'हिन्दी', file: 'residential-hi.html' },
-    { code: 'ar', label: 'العربية', file: 'residential-ar.html' }
+    { code: 'en', label: 'English', file: 'renewal.html' },
+    { code: 'fr', label: 'Français', file: 'renewal-fr.html' },
+    { code: 'de', label: 'Deutsch', file: 'renewal-de.html' },
+    { code: 'it', label: 'Italiano', file: 'renewal-it.html' },
+    { code: 'nl', label: 'Nederlands', file: 'renewal-nl.html' },
+    { code: 'zh', label: '中文', file: 'renewal-zh.html' },
+    { code: 'hi', label: 'हिन्दी', file: 'renewal-hi.html' },
+    { code: 'ar', label: 'العربية', file: 'renewal-ar.html' }
   ];
   const current = languages.find(l => l.code === lang) || languages[0];
 

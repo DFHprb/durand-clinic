@@ -41,7 +41,7 @@ function injectNav() {
                 <a href="counselling-psychotherapy.html" data-page="counselling-psychotherapy">Counselling &amp; Psychotherapy</a>
                 <a href="physiotherapy.html" data-page="physiotherapy">Physiotherapy</a>
                 <a href="nutritional-support.html" data-page="nutritional-support">Nutritional Support &amp; Supplements</a>
-                <a href="neurofeedback.html" data-page="neurofeedback">Neurofeedback</a>
+                <a href="neurofeedback.html" data-page="neurofeedback">Neurofeedback + Vielight</a>
                 <a href="reflexology-lymphatic-drainage.html" data-page="reflexology-lymphatic-drainage">Reflexology &amp; Lymphatic Drainage</a>
               </div>
             </div>

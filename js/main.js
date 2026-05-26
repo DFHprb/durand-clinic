@@ -63,7 +63,7 @@ function injectNav() {
 
 /* --- Scroll Banner (paramedical pages only) --- */
 function injectScrollBanner() {
-  const paramedicalPages = ['acupuncture','chiropractic','counselling-psychotherapy','naturopathic','neurofeedback','nutritional-support','physiotherapy','reflexology-lymphatic-drainage','registered-massage-therapy','traditional-chinese-medicine'];
+  const paramedicalPages = ['acupuncture','chiropractic','counselling-psychotherapy','medical-aesthetics','naturopathic','neurofeedback','nutritional-support','physiotherapy','reflexology-lymphatic-drainage','registered-massage-therapy','traditional-chinese-medicine'];
   const page = document.body.dataset.page;
   if (!paramedicalPages.includes(page)) return;
 

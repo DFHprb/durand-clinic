@@ -71,7 +71,7 @@ function injectScrollBanner() {
   const items = [
     'Free On-Site Parking',
     'South Downtown &mdash; Hamilton',
-    'Direct Billing Available',
+    ...(page !== 'medical-aesthetics' ? ['Direct Billing Available'] : []),
     'Physician-Referred &amp; Self-Referred Welcome',
     'Collaborative Care',
   ];

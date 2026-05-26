@@ -47,6 +47,7 @@ function injectNav() {
             </div>
           </div>
           <a href="specialty.html" data-page="specialty">Specialty Programs</a>
+          <a href="medical-aesthetics.html" data-page="medical-aesthetics">Medical Aesthetics</a>
           <a href="renewal.html" data-page="renewal">Nature Supported Change</a>
           <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
         </div>

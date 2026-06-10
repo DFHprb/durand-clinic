@@ -5,160 +5,160 @@
   <!-- Priority 1.0 — Homepage -->
   <url>
     <loc>https://durand.clinic/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Priority 0.9 — Core revenue pages (Executive Health + Longevity + Residential) -->
   <url>
-    <loc>https://durand.clinic/executive-health.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://durand.clinic/executive-health</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/services.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/services</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/specialty.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/specialty</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/medical-aesthetics.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/medical-aesthetics</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/renewal.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/renewal</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/pricing.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/pricing</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Priority 0.8 — Conversion pages -->
   <url>
-    <loc>https://durand.clinic/contact.html</loc>
+    <loc>https://durand.clinic/contact</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/enquiry.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/enquiry</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/founder-message.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/founder-message</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Priority 0.8 — Insights hub (SEO content engine) -->
   <url>
-    <loc>https://durand.clinic/insights.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/insights</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/insights/why-your-biological-age-is-out-of-date.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/insights/why-your-biological-age-is-out-of-date</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Priority 0.7 — Trust / credibility -->
   <url>
-    <loc>https://durand.clinic/about.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/about</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/team.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/team</loc>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/partners.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/partners</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/faq.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/faq</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Priority 0.6 — Residential language variants (global clinic enquiries track) -->
   <url>
-    <loc>https://durand.clinic/renewal-ar.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/renewal-ar</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://durand.clinic/renewal-ar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/renewal.html"/>
   </url>
   <url>
-    <loc>https://durand.clinic/renewal-zh.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/renewal-zh</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://durand.clinic/renewal-zh.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/renewal.html"/>
   </url>
   <url>
-    <loc>https://durand.clinic/renewal-de.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/renewal-de</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://durand.clinic/renewal-de.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/renewal.html"/>
   </url>
   <url>
-    <loc>https://durand.clinic/renewal-fr.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/renewal-fr</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://durand.clinic/renewal-fr.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/renewal.html"/>
   </url>
   <url>
-    <loc>https://durand.clinic/renewal-hi.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/renewal-hi</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="hi" href="https://durand.clinic/renewal-hi.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/renewal.html"/>
   </url>
   <url>
-    <loc>https://durand.clinic/renewal-it.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/renewal-it</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://durand.clinic/renewal-it.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://durand.clinic/renewal.html"/>
   </url>
   <url>
-    <loc>https://durand.clinic/renewal-nl.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://durand.clinic/renewal-nl</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://durand.clinic/renewal-nl.html"/>
@@ -167,68 +167,68 @@
 
   <!-- Priority 0.5 — Paramedical services (optional, de-emphasized) -->
   <url>
-    <loc>https://durand.clinic/treatment-services.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/treatment-services</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/acupuncture.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/acupuncture</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/chiropractic.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/chiropractic</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/counselling-psychotherapy.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/counselling-psychotherapy</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/naturopathic.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/naturopathic</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/neurofeedback.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/neurofeedback</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/nutritional-support.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/nutritional-support</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/physiotherapy.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/physiotherapy</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/reflexology-lymphatic-drainage.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/reflexology-lymphatic-drainage</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/registered-massage-therapy.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/registered-massage-therapy</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://durand.clinic/traditional-chinese-medicine.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://durand.clinic/traditional-chinese-medicine</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

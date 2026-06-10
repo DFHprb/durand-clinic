@@ -23,35 +23,35 @@ function injectNav() {
   navPlaceholder.innerHTML = `
     <nav class="nav" id="main-nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">
+        <a href="/" class="nav-logo">
           <div class="logo-icon"><img src="images/durand-icon.png" alt="" style="width:32px;height:32px;object-fit:contain;display:block;transform:translateY(-1px) translateX(1px);"></div>
           <span class="logo-text">The Durand <span class="highlight">Clinic</span><sup>®</sup></span>
         </a>
         <div class="nav-links" id="nav-links">
-          <a href="executive-health.html" data-page="executive-health">Extensive + Longevity</a>
+          <a href="executive-health" data-page="executive-health">Extensive + Longevity</a>
           <div class="nav-dropdown-wrap">
             <span class="nav-dropdown-trigger">Treatment Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg></span>
             <div class="nav-dropdown-menu">
               <div class="nav-dropdown-menu-inner">
-                <a href="registered-massage-therapy.html" data-page="registered-massage-therapy">Registered Massage Therapy</a>
-                <a href="traditional-chinese-medicine.html" data-page="traditional-chinese-medicine">Traditional Chinese Medicine</a>
-                <a href="acupuncture.html" data-page="acupuncture">Acupuncture</a>
-                <a href="naturopathic.html" data-page="naturopathic">Naturopathic Medicine</a>
-                <a href="chiropractic.html" data-page="chiropractic">Chiropractic</a>
-                <a href="counselling-psychotherapy.html" data-page="counselling-psychotherapy">Counselling &amp; Psychotherapy</a>
-                <a href="physiotherapy.html" data-page="physiotherapy">Physiotherapy</a>
-                <a href="nutritional-support.html" data-page="nutritional-support">Nutritional Support &amp; Supplements</a>
-                <a href="neurofeedback.html" data-page="neurofeedback">Neurofeedback + Vielight</a>
-                <a href="reflexology-lymphatic-drainage.html" data-page="reflexology-lymphatic-drainage">Reflexology &amp; Lymphatic Drainage</a>
+                <a href="registered-massage-therapy" data-page="registered-massage-therapy">Registered Massage Therapy</a>
+                <a href="traditional-chinese-medicine" data-page="traditional-chinese-medicine">Traditional Chinese Medicine</a>
+                <a href="acupuncture" data-page="acupuncture">Acupuncture</a>
+                <a href="naturopathic" data-page="naturopathic">Naturopathic Medicine</a>
+                <a href="chiropractic" data-page="chiropractic">Chiropractic</a>
+                <a href="counselling-psychotherapy" data-page="counselling-psychotherapy">Counselling &amp; Psychotherapy</a>
+                <a href="physiotherapy" data-page="physiotherapy">Physiotherapy</a>
+                <a href="nutritional-support" data-page="nutritional-support">Nutritional Support &amp; Supplements</a>
+                <a href="neurofeedback" data-page="neurofeedback">Neurofeedback + Vielight</a>
+                <a href="reflexology-lymphatic-drainage" data-page="reflexology-lymphatic-drainage">Reflexology &amp; Lymphatic Drainage</a>
               </div>
             </div>
           </div>
-          <a href="specialty.html" data-page="specialty">Specialty Programs</a>
-          <a href="medical-aesthetics.html" data-page="medical-aesthetics">Medical Aesthetics</a>
-          <a href="renewal.html" data-page="renewal">Nature Supported Change</a>
-          <a href="partners.html" data-page="partners">Global Partner Enquiries</a>
+          <a href="specialty" data-page="specialty">Specialty Programs</a>
+          <a href="medical-aesthetics" data-page="medical-aesthetics">Medical Aesthetics</a>
+          <a href="renewal" data-page="renewal">Nature Supported Change</a>
+          <a href="partners" data-page="partners">Global Partner Enquiries</a>
         </div>
-        <a href="contact.html" class="btn btn-primary" style="font-size:0.85rem;padding:8px 20px;margin-left:8px;white-space:nowrap;">Contact Us</a>
+        <a href="contact" class="btn btn-primary" style="font-size:0.85rem;padding:8px 20px;margin-left:8px;white-space:nowrap;">Contact Us</a>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
@@ -109,7 +109,7 @@ function injectFooter() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
+            <a href="/" class="nav-logo" style="margin-bottom:4px;">
               <div class="logo-icon"><img src="images/durand-icon.png" alt="" style="width:32px;height:32px;object-fit:contain;display:block;transform:translateY(-1px) translateX(1px);"></div>
               <span class="logo-text">The Durand <span class="highlight">Clinic</span><sup>®</sup></span>
             </a>
@@ -117,25 +117,25 @@ function injectFooter() {
           </div>
           <div class="footer-col">
             <h4>Services</h4>
-            <a href="executive-health.html">Extensive Assessment</a>
-            <a href="treatment-services.html">Treatment Services</a>
-            <a href="specialty.html">Specialty Programs</a>
-            <a href="renewal.html">Nature Supported Change</a>
-            <a href="pricing.html">Pricing</a>
+            <a href="executive-health">Extensive Assessment</a>
+            <a href="treatment-services">Treatment Services</a>
+            <a href="specialty">Specialty Programs</a>
+            <a href="renewal">Nature Supported Change</a>
+            <a href="pricing">Pricing</a>
           </div>
           <div class="footer-col">
             <h4>Company</h4>
-            <a href="about.html">About Us</a>
-            <a href="insights.html">Insights</a>
-            <a href="faq.html">FAQ</a>
-            <a href="partners.html">Global Partner Enquiries</a>
+            <a href="about">About Us</a>
+            <a href="insights">Insights</a>
+            <a href="faq">FAQ</a>
+            <a href="partners">Global Partner Enquiries</a>
           </div>
           <div class="footer-col">
             <h4>Contact</h4>
-            <a href="contact.html">Book Assessment</a>
+            <a href="contact">Book Assessment</a>
             <a href="mailto:info@durandhealth.com">info@durandhealth.com</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="team.html">Meet the Team</a>
+            <a href="contact">Contact Us</a>
+            <a href="team">Meet the Team</a>
           </div>
         </div>
         <div class="footer-bottom">
@@ -249,14 +249,14 @@ function initLanguageSelector() {
   // Determine current language from html lang attribute
   const lang = document.documentElement.lang || 'en';
   const languages = [
-    { code: 'en', label: 'English', file: 'renewal.html' },
-    { code: 'fr', label: 'Français', file: 'renewal-fr.html' },
-    { code: 'de', label: 'Deutsch', file: 'renewal-de.html' },
-    { code: 'it', label: 'Italiano', file: 'renewal-it.html' },
-    { code: 'nl', label: 'Nederlands', file: 'renewal-nl.html' },
-    { code: 'zh', label: '中文', file: 'renewal-zh.html' },
-    { code: 'hi', label: 'हिन्दी', file: 'renewal-hi.html' },
-    { code: 'ar', label: 'العربية', file: 'renewal-ar.html' }
+    { code: 'en', label: 'English', file: 'renewal' },
+    { code: 'fr', label: 'Français', file: 'renewal-fr' },
+    { code: 'de', label: 'Deutsch', file: 'renewal-de' },
+    { code: 'it', label: 'Italiano', file: 'renewal-it' },
+    { code: 'nl', label: 'Nederlands', file: 'renewal-nl' },
+    { code: 'zh', label: '中文', file: 'renewal-zh' },
+    { code: 'hi', label: 'हिन्दी', file: 'renewal-hi' },
+    { code: 'ar', label: 'العربية', file: 'renewal-ar' }
   ];
   const current = languages.find(l => l.code === lang) || languages[0];
 

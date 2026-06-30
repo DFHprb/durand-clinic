@@ -114,6 +114,10 @@ function injectFooter() {
               <span class="logo-text">The Durand <span class="highlight">Clinic</span><sup>®</sup></span>
             </a>
             <p>${brandLine}</p>
+            <p style="margin-top:12px;font-size:0.85rem;line-height:1.8;">
+              <a href="tel:+19055271342">Phone: 905-527-1342</a><br>
+              <span>Fax: 365-317-8043</span>
+            </p>
           </div>
           <div class="footer-col">
             <h4>Services</h4>

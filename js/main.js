@@ -356,11 +356,11 @@ function alignHeroContentToImage() {
   if (!layout || !content || !img) return;
 
   function apply() {
-    content.style.transform = '';
+    content.style.marginTop = '';
     const isSideBySide = getComputedStyle(layout).gridTemplateColumns.trim().split(' ').length > 1;
     if (!isSideBySide) return;
     const gap = img.getBoundingClientRect().top - layout.getBoundingClientRect().top;
-    if (gap > 0) content.style.transform = `translateY(${gap}px)`;
+    if (gap > 0) content.style.marginTop = `${gap * 2}px`;
   }
 
   img.complete ? apply() : img.addEventListener('load', apply);

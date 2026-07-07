@@ -504,7 +504,7 @@ p {
   display: flex;
   align-items: center;
   position: relative;
-  padding-top: var(--nav-height);
+  padding-top: calc(var(--nav-height) + 40px);
   background: var(--gradient-hero);
   overflow: hidden;
 }
@@ -515,7 +515,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero-content {

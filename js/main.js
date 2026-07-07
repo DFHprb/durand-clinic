@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveNav();
   initLanguageSelector();
   initHeroCarousel();
-  alignHeroContentToImage();
 });
 
 /* --- Navigation Injection --- */
@@ -346,26 +345,6 @@ function initHeroCarousel() {
   carousel?.addEventListener('mouseleave', startTimer);
 
   startTimer();
-}
-
-/* --- Align hero text top with hero image top (executive-health hero) --- */
-function alignHeroContentToImage() {
-  const layout = document.querySelector('.hero-layout');
-  const content = document.querySelector('.hero-content');
-  const img = document.querySelector('.hero-image img');
-  if (!layout || !content || !img) return;
-
-  function apply() {
-    content.style.marginTop = '';
-    const isSideBySide = getComputedStyle(layout).gridTemplateColumns.trim().split(' ').length > 1;
-    if (!isSideBySide) return;
-    const gap = img.getBoundingClientRect().top - layout.getBoundingClientRect().top;
-    if (gap > 0) content.style.marginTop = `${gap * 2}px`;
-  }
-
-  img.complete ? apply() : img.addEventListener('load', apply);
-  document.fonts?.ready?.then(apply);
-  window.addEventListener('resize', apply);
 }
 
 /* --- Smooth counter animation --- */

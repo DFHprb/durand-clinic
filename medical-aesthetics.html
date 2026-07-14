@@ -357,19 +357,94 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section" style="background: var(--bg-secondary);">
+  <!-- Waitlist Form -->
+  <section class="section" style="background: var(--bg-secondary);" id="waitlist">
     <div class="container">
-      <div class="cta-banner fade-in">
-        <span class="label" style="display:inline-block;margin-bottom:16px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-cyan);padding:6px 16px;border:1px solid rgba(0,229,255,0.2);border-radius:100px;background:rgba(0,229,255,0.05);">Free Consultation</span>
-        <h2>Ready to <span class="text-gradient">Transform Your Skin</span>?</h2>
-        <p>Book a complimentary consultation at The Durand Clinic. Together you&rsquo;ll build a personalized treatment plan &mdash; no commitment, no pressure, just clarity on the path to your best skin.</p>
-        <a href="https://durandhealth.janeapp.com/" class="btn btn-primary" target="_blank" rel="noopener">Book a Free Consultation &rarr;</a>
+      <div class="section-header fade-in">
+        <span class="label">Join the Waitlist</span>
+        <h2>Be First for <span class="text-gradient">Medical Aesthetics</span></h2>
+        <p>Our medical aesthetics services are in high demand. Join the waitlist and we&rsquo;ll reach out as soon as a spot opens up.</p>
+      </div>
+
+      <div style="max-width:700px;margin:0 auto;" class="fade-in">
+        <form id="waitlist-form" onsubmit="handleWaitlistSubmit(event)">
+            <input type="hidden" name="access_key" value="930be6cc-d672-4f2d-a6c5-8a936fb208e7">
+            <input type="hidden" name="subject" value="New Medical Aesthetics Waitlist Signup — The Durand Clinic">
+            <input type="checkbox" name="botcheck" style="display:none;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Interested Service</label>
+            <select id="service" name="service">
+              <option value="">Select...</option>
+              <option value="custom-facials">Custom Facials</option>
+              <option value="chemical-peels">Custom Chemical Peels</option>
+              <option value="hydrafacial">HydraFacial</option>
+              <option value="microneedling">Microneedling</option>
+              <option value="microdermabrasion">Microdermabrasion</option>
+              <option value="not-sure">Not Sure Yet</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            Join the Waitlist &rarr;
+          </button>
+        </form>
+
+        <div id="form-success" style="display:none;text-align:center;padding:40px;background:var(--bg-card);border:1px solid rgba(0,229,255,0.2);border-radius:var(--radius-lg);margin-top:24px;">
+          <div style="font-size:3rem;margin-bottom:16px;">&#x2713;</div>
+          <h3>You&rsquo;re on the List</h3>
+          <p style="margin-top:8px;">Thank you for your interest. We&rsquo;ll be in touch as soon as a spot opens up.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <div id="footer-placeholder"></div>
   <script src="js/main.js"></script>
+  <script>
+    async function handleWaitlistSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('waitlist-form');
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        btn.textContent = 'Join the Waitlist →';
+        btn.disabled = false;
+        alert('Something went wrong. Please email us directly at info@durandhealth.com');
+      }
+    }
+  </script>
 </body>
 </html>

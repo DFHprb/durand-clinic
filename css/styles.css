@@ -580,7 +580,8 @@ p {
 
 .hero-stats {
   display: flex;
-  gap: 48px;
+  justify-content: space-between;
+  gap: 32px;
   margin-top: 56px;
   padding-top: 40px;
   border-top: var(--border-subtle);
@@ -2115,6 +2116,7 @@ p {
   .hero-stats {
     flex-direction: column;
     gap: 24px;
+    text-align: center;
   }
 
   .card-grid-2,

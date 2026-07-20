@@ -1082,7 +1082,7 @@ p {
   left: 50%;
   transform: translateX(-50%);
   background: var(--gradient-blue);
-  color: var(--text-primary);
+  color: #0a0e1a;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;

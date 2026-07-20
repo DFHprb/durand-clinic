@@ -1233,6 +1233,10 @@ p {
   transform: rotate(45deg);
 }
 
+.faq-item.active .hsa-toggle-icon {
+  transform: rotate(180deg);
+}
+
 .faq-answer {
   max-height: 0;
   overflow: hidden;

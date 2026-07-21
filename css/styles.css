@@ -1108,10 +1108,25 @@ p {
   color: var(--text-muted);
 }
 
+.pricing-card .price .price-was {
+  text-decoration: line-through;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
 .pricing-card .price-note {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 28px;
+}
+
+.pricing-card .price-label {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: -12px;
+  margin-bottom: 20px;
 }
 
 .pricing-card .features-list {

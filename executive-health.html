@@ -459,37 +459,47 @@
       </div>
 
       <div class="testimonial-carousel fade-in">
-        <div class="testimonial-carousel-track">
-          <div class="testimonial-slide active">
-            <span class="testimonial-quote-mark">&ldquo;</span>
-            <div class="testimonial-text">
-              <p>Having previously completed executive health assessments with another well-known provider, I can confidently say the experience at Durand Health was exceptional. The team was proactive before, during, and after my assessment, making the entire process seamless.</p>
-              <p>Completing much of the diagnostic testing in advance meant I had significantly more time with the healthcare professionals on assessment day. Every conversation felt thorough, unhurried, and genuinely focused on my health rather than the clock.</p>
-              <p>The atmosphere was another standout. Rather than feeling clinical or institutional, Durand Health provided a welcoming boutique environment with a private room where I could relax between appointments. The entire day was incredibly well organized and comfortable.</p>
-              <p>The physician and nursing team took the time to explain not only my individual test results, but how they connected together to provide a complete picture of my health. Every question was answered thoughtfully, and I never felt rushed. It was one of the most comprehensive and personalized healthcare experiences I&rsquo;ve had.</p>
+        <div class="testimonial-stage">
+          <button type="button" class="testimonial-nav testimonial-nav--prev testimonial-nav--side" aria-label="Previous testimonial">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3 L5 9 L11 15"/></svg>
+          </button>
+
+          <div class="testimonial-carousel-track">
+            <div class="testimonial-slide active">
+              <span class="testimonial-quote-mark">&ldquo;</span>
+              <div class="testimonial-text">
+                <p>Having previously completed executive health assessments with another well-known provider, I can confidently say the experience at Durand Health was exceptional. The team was proactive before, during, and after my assessment, making the entire process seamless.</p>
+                <p>Completing much of the diagnostic testing in advance meant I had significantly more time with the healthcare professionals on assessment day. Every conversation felt thorough, unhurried, and genuinely focused on my health rather than the clock.</p>
+                <p>The atmosphere was another standout. Rather than feeling clinical or institutional, Durand Health provided a welcoming boutique environment with a private room where I could relax between appointments. The entire day was incredibly well organized and comfortable.</p>
+                <p>The physician and nursing team took the time to explain not only my individual test results, but how they connected together to provide a complete picture of my health. Every question was answered thoughtfully, and I never felt rushed. It was one of the most comprehensive and personalized healthcare experiences I&rsquo;ve had.</p>
+              </div>
+              <div class="testimonial-attribution">— CEO, Toronto Credit Union</div>
             </div>
-            <div class="testimonial-attribution">— CEO, Toronto Credit Union</div>
+
+            <div class="testimonial-slide">
+              <span class="testimonial-quote-mark">&ldquo;</span>
+              <div class="testimonial-text">
+                <p>Having experienced executive health assessments with another leading provider, I found Durand Health to offer a much more personalized and comprehensive experience. Completing much of the testing before assessment day allowed significantly more time with the clinical team, resulting in thoughtful discussions that never felt rushed. Every aspect of the day was exceptionally well organized, and the boutique setting, private room, and attentive staff created a welcoming, comfortable environment.</p>
+                <p>What truly set the experience apart was the time taken to explain not just my individual test results, but how they all connected to provide a complete picture of my health. I left with a much deeper understanding of my overall health, clear recommendations for the future, and the confidence that every question had been answered. Durand Health delivers an exceptional level of care that is both highly personalized and incredibly thorough.</p>
+              </div>
+              <div class="testimonial-attribution">— CEO, Ontario Credit Union</div>
+            </div>
           </div>
 
-          <div class="testimonial-slide">
-            <span class="testimonial-quote-mark">&ldquo;</span>
-            <div class="testimonial-text">
-              <p>Having experienced executive health assessments with another leading provider, I found Durand Health to offer a much more personalized and comprehensive experience. Completing much of the testing before assessment day allowed significantly more time with the clinical team, resulting in thoughtful discussions that never felt rushed. Every aspect of the day was exceptionally well organized, and the boutique setting, private room, and attentive staff created a welcoming, comfortable environment.</p>
-              <p>What truly set the experience apart was the time taken to explain not just my individual test results, but how they all connected to provide a complete picture of my health. I left with a much deeper understanding of my overall health, clear recommendations for the future, and the confidence that every question had been answered. Durand Health delivers an exceptional level of care that is both highly personalized and incredibly thorough.</p>
-            </div>
-            <div class="testimonial-attribution">— CEO, Ontario Credit Union</div>
-          </div>
+          <button type="button" class="testimonial-nav testimonial-nav--next testimonial-nav--side" aria-label="Next testimonial">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3 L13 9 L7 15"/></svg>
+          </button>
         </div>
 
         <div class="testimonial-controls">
-          <button type="button" class="testimonial-nav testimonial-nav--prev" aria-label="Previous testimonial">
+          <button type="button" class="testimonial-nav testimonial-nav--prev testimonial-nav--inline" aria-label="Previous testimonial">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3 L5 9 L11 15"/></svg>
           </button>
           <div class="testimonial-dots">
             <button type="button" class="testimonial-dot active" aria-label="Show testimonial 1"></button>
             <button type="button" class="testimonial-dot" aria-label="Show testimonial 2"></button>
           </div>
-          <button type="button" class="testimonial-nav testimonial-nav--next" aria-label="Next testimonial">
+          <button type="button" class="testimonial-nav testimonial-nav--next testimonial-nav--inline" aria-label="Next testimonial">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3 L13 9 L7 15"/></svg>
           </button>
         </div>
@@ -530,10 +540,10 @@
         dots.forEach(function (dot, i) { dot.classList.toggle('active', i === current); });
       }
 
-      var prevBtn = document.querySelector('.testimonial-nav--prev');
-      var nextBtn = document.querySelector('.testimonial-nav--next');
-      if (prevBtn) prevBtn.addEventListener('click', function () { show(current - 1); });
-      if (nextBtn) nextBtn.addEventListener('click', function () { show(current + 1); });
+      var prevBtns = document.querySelectorAll('.testimonial-nav--prev');
+      var nextBtns = document.querySelectorAll('.testimonial-nav--next');
+      prevBtns.forEach(function (btn) { btn.addEventListener('click', function () { show(current - 1); }); });
+      nextBtns.forEach(function (btn) { btn.addEventListener('click', function () { show(current + 1); }); });
       dots.forEach(function (dot, i) { dot.addEventListener('click', function () { show(i); }); });
     })();
   </script>

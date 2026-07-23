@@ -1281,25 +1281,7 @@ p {
   max-height: 500px;
 }
 
-/* --- Diagnostic Capability Explorer (bento grid) --- */
-.diagnostic-icon--blue {
-  background: rgba(0, 180, 255, 0.08);
-  border: 1px solid rgba(0, 180, 255, 0.15);
-  color: var(--accent-blue);
-}
-
-.diagnostic-icon--purple {
-  background: rgba(139, 92, 246, 0.08);
-  border: 1px solid rgba(139, 92, 246, 0.15);
-  color: var(--accent-purple);
-}
-
-.diagnostic-icon--magenta {
-  background: rgba(217, 70, 239, 0.08);
-  border: 1px solid rgba(217, 70, 239, 0.15);
-  color: var(--accent-magenta);
-}
-
+/* --- Diagnostic Capability Explorer (tag cloud) --- */
 .diagnostic-legend {
   display: flex;
   flex-wrap: wrap;
@@ -1327,94 +1309,63 @@ p {
 .diagnostic-legend-dot--purple { background: var(--accent-purple); }
 .diagnostic-legend-dot--magenta { background: var(--accent-magenta); }
 
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 120px;
-  grid-auto-flow: dense;
-  gap: 16px;
+.diagnostic-chip-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
 }
 
-.bento-tile {
+.diagnostic-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 26px;
+  border-radius: 100px;
   background: var(--bg-card);
   border: var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 10px;
-  transition: all var(--transition-med);
-  position: relative;
-  overflow: hidden;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
 }
 
-.bento-tile:hover {
-  transform: translateY(-4px);
-  border-color: rgba(0, 229, 255, 0.2);
-}
-
-.bento-tile--wide {
-  grid-column: span 2;
-}
-
-.bento-tile--tall {
-  grid-row: span 2;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-
-.bento-tile .diagnostic-icon--blue,
-.bento-tile .diagnostic-icon--purple,
-.bento-tile .diagnostic-icon--magenta {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.diagnostic-chip::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
   flex-shrink: 0;
 }
 
-.bento-tile--tall .diagnostic-icon--blue,
-.bento-tile--tall .diagnostic-icon--purple,
-.bento-tile--tall .diagnostic-icon--magenta {
-  width: 52px;
-  height: 52px;
+.diagnostic-chip--blue::before { background: var(--accent-blue); }
+.diagnostic-chip--purple::before { background: var(--accent-purple); }
+.diagnostic-chip--magenta::before { background: var(--accent-magenta); }
+
+.diagnostic-chip:hover {
+  transform: translateY(-2px);
 }
 
-.bento-tile-label {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--text-primary);
-  line-height: 1.3;
+.diagnostic-chip--blue:hover {
+  border-color: rgba(0, 180, 255, 0.3);
+  background: rgba(0, 180, 255, 0.06);
 }
 
-.bento-tile--wide .bento-tile-label {
-  font-size: 1.15rem;
+.diagnostic-chip--purple:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  background: rgba(139, 92, 246, 0.06);
 }
 
-@media (max-width: 900px) {
-  .bento-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.diagnostic-chip--magenta:hover {
+  border-color: rgba(217, 70, 239, 0.3);
+  background: rgba(217, 70, 239, 0.06);
 }
 
 @media (max-width: 640px) {
-  .bento-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .bento-tile,
-  .bento-tile--wide,
-  .bento-tile--tall {
-    grid-column: span 1;
-    grid-row: span 1;
-    justify-content: flex-start;
-    text-align: left;
-    align-items: flex-start;
+  .diagnostic-chip {
+    padding: 11px 20px;
+    font-size: 0.95rem;
   }
 }
 

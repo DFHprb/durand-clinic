@@ -275,6 +275,7 @@ p {
   color: var(--text-secondary);
   font-size: 0.9rem;
   font-weight: 500;
+  line-height: 1.25;
   padding: 8px 16px;
   border-radius: var(--radius-sm);
   transition: all var(--transition-fast);
@@ -449,6 +450,7 @@ p {
   color: var(--text-secondary);
   font-size: 0.9rem;
   font-weight: 500;
+  line-height: 1.25;
   padding: 8px 16px;
   border-radius: var(--radius-sm);
   transition: all var(--transition-fast);

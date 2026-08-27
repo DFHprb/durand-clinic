@@ -60,7 +60,7 @@
       <h1 class="label" style="display:inline-block;margin-bottom:16px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-cyan);padding:6px 16px;border:1px solid rgba(0,229,255,0.2);border-radius:100px;background:rgba(0,229,255,0.05);">Occupational Therapy — Hamilton, ON</h1>
       <p style="font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;line-height:1.15;letter-spacing:-0.02em;margin-bottom:20px;">Write with Ease. <span class="text-gradient">Participate with Confidence.</span></p>
       <p>Individualized occupational therapy for children in pre-K through Grade 5 who are experiencing challenges with handwriting, written output, fine-motor and visual-motor skills, and functional participation at school and at home.</p>
-      <a href="https://durandhealth.janeapp.com/" class="btn btn-primary" style="margin-top:12px;" target="_blank" rel="noopener">Book an Appointment &rarr;</a>
+      <a href="#inquiry" class="btn btn-primary" style="margin-top:12px;">Submit an Inquiry &rarr;</a>
     </div>
   </section>
 
@@ -82,7 +82,7 @@
             <li><span class="check">&#x2713;</span> Written-output support</li>
             <li><span class="check">&#x2713;</span> Strategies to improve classroom and everyday participation</li>
           </ul>
-          <a href="https://durandhealth.janeapp.com/" class="btn btn-primary" style="margin-top:24px;" target="_blank" rel="noopener">Book an Appointment &rarr;</a>
+          <a href="#inquiry" class="btn btn-primary" style="margin-top:24px;">Submit an Inquiry &rarr;</a>
         </div>
       </div>
     </div>
@@ -244,25 +244,91 @@
           <img src="images/bela-bratch-occupational-therapist.png" alt="Bela Bratch — Occupational Therapist at The Durand Clinic" loading="lazy" style="width:180px;height:180px;object-fit:cover;object-position:top;border-radius:50%;border:2px solid rgba(0,229,255,0.2);margin-bottom:20px;display:block;margin-left:auto;margin-right:auto;">
           <h3>Bela Bratch</h3>
           <p>Occupational Therapist</p>
-          <a href="https://durandhealth.janeapp.com/" class="btn btn-outline" style="margin-top:16px;" target="_blank" rel="noopener">Book with Bela &rarr;</a>
+          <a href="#inquiry" class="btn btn-outline" style="margin-top:16px;">Submit an Inquiry &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section">
+  <div class="divider"></div>
+
+  <!-- Inquiry Form -->
+  <section class="section" id="inquiry" style="background: var(--bg-secondary);">
     <div class="container">
-      <div class="cta-banner fade-in">
-        <span class="label" style="display:inline-block;margin-bottom:16px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-cyan);padding:6px 16px;border:1px solid rgba(0,229,255,0.2);border-radius:100px;background:rgba(0,229,255,0.05);">No Referral Required</span>
-        <h2>Ready to Build <span class="text-gradient">Writing Confidence</span>?</h2>
-        <p>Book an occupational therapy assessment at The Durand Clinic. No referral needed.</p>
-        <a href="https://durandhealth.janeapp.com/" class="btn btn-primary" target="_blank" rel="noopener">Book an Appointment &rarr;</a>
+      <div class="section-header fade-in">
+        <span class="label">No Referral Required</span>
+        <h2>Submit an <span class="text-gradient">Inquiry</span></h2>
+        <p>Online booking for occupational therapy isn&rsquo;t available yet. Tell us a bit about your child and we&rsquo;ll be in touch to schedule an assessment.</p>
+      </div>
+
+      <div style="max-width:640px;margin:40px auto 0;" class="fade-in">
+        <form id="ot-inquiry-form" onsubmit="handleOtInquirySubmit(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="parentName">Parent / Guardian Name *</label>
+              <input type="text" id="parentName" name="parentName" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label for="childName">Child&rsquo;s Name *</label>
+              <input type="text" id="childName" name="childName" required placeholder="Your child's name">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="grade">Child&rsquo;s Age / Grade</label>
+            <input type="text" id="grade" name="grade" placeholder="e.g. 7 years old, Grade 2">
+          </div>
+
+          <div class="form-group">
+            <label for="message">What Would You Like Help With? *</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your child's handwriting, written output, or fine-motor challenges..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            Submit Inquiry &rarr;
+          </button>
+        </form>
+
+        <div id="ot-form-success" style="display:none;text-align:center;padding:40px;background:var(--bg-card);border:1px solid rgba(0,229,255,0.2);border-radius:var(--radius-lg);margin-top:24px;">
+          <div style="font-size:3rem;margin-bottom:16px;">&#x2713;</div>
+          <h3>Inquiry Submitted</h3>
+          <p style="margin-top:8px;">Thank you for reaching out. We&rsquo;ll be in touch shortly to discuss next steps for your child.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <div id="footer-placeholder"></div>
   <script src="js/main.js"></script>
+  <script>
+    function handleOtInquirySubmit(e) {
+      e.preventDefault();
+      var form = document.getElementById('ot-inquiry-form');
+      var data = new FormData(form);
+      var subject = encodeURIComponent('Occupational Therapy Inquiry — ' + (data.get('childName') || 'New Inquiry'));
+      var body = encodeURIComponent(
+        'Parent/Guardian: ' + data.get('parentName') + '\n' +
+        'Child: ' + data.get('childName') + '\n' +
+        'Email: ' + data.get('email') + '\n' +
+        'Phone: ' + (data.get('phone') || 'Not provided') + '\n' +
+        'Age/Grade: ' + (data.get('grade') || 'Not provided') + '\n\n' +
+        'Message:\n' + data.get('message')
+      );
+      window.open('mailto:info@durandhealth.com?subject=' + subject + '&body=' + body, '_self');
+      form.style.display = 'none';
+      document.getElementById('ot-form-success').style.display = 'block';
+    }
+  </script>
 </body>
 </html>

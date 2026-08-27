@@ -265,29 +265,18 @@
         <form id="ot-inquiry-form" onsubmit="handleOtInquirySubmit(event)">
           <div class="form-grid">
             <div class="form-group">
-              <label for="parentName">Parent / Guardian Name *</label>
+              <label for="parentName">Name *</label>
               <input type="text" id="parentName" name="parentName" required placeholder="Your full name">
             </div>
-            <div class="form-group">
-              <label for="childName">Child&rsquo;s Name *</label>
-              <input type="text" id="childName" name="childName" required placeholder="Your child's name">
-            </div>
-          </div>
-
-          <div class="form-grid">
             <div class="form-group">
               <label for="email">Email *</label>
               <input type="email" id="email" name="email" required placeholder="you@example.com">
             </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
-            </div>
           </div>
 
           <div class="form-group">
-            <label for="grade">Child&rsquo;s Age / Grade</label>
-            <input type="text" id="grade" name="grade" placeholder="e.g. 7 years old, Grade 2">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
           </div>
 
           <div class="form-group">
@@ -316,13 +305,11 @@
       e.preventDefault();
       var form = document.getElementById('ot-inquiry-form');
       var data = new FormData(form);
-      var subject = encodeURIComponent('Occupational Therapy Inquiry — ' + (data.get('childName') || 'New Inquiry'));
+      var subject = encodeURIComponent('Occupational Therapy Inquiry — ' + (data.get('parentName') || 'New Inquiry'));
       var body = encodeURIComponent(
-        'Parent/Guardian: ' + data.get('parentName') + '\n' +
-        'Child: ' + data.get('childName') + '\n' +
+        'Name: ' + data.get('parentName') + '\n' +
         'Email: ' + data.get('email') + '\n' +
-        'Phone: ' + (data.get('phone') || 'Not provided') + '\n' +
-        'Age/Grade: ' + (data.get('grade') || 'Not provided') + '\n\n' +
+        'Phone: ' + data.get('phone') + '\n\n' +
         'Message:\n' + data.get('message')
       );
       window.open('mailto:info@durandhealth.com?subject=' + subject + '&body=' + body, '_self');

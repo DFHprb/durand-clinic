@@ -43,6 +43,7 @@ function injectNav() {
                 <a href="nutritional-support" data-page="nutritional-support">Nutritional Support &amp; Supplements</a>
                 <a href="neurofeedback" data-page="neurofeedback">Neurofeedback + Vielight</a>
                 <a href="reflexology-lymphatic-drainage" data-page="reflexology-lymphatic-drainage">Reflexology &amp; Lymphatic Drainage</a>
+                <a href="occupational-therapy" data-page="occupational-therapy">Occupational Therapy</a>
               </div>
             </div>
           </div>
@@ -64,7 +65,7 @@ function injectNav() {
 
 /* --- Scroll Banner (paramedical pages only) --- */
 function injectScrollBanner() {
-  const paramedicalPages = ['acupuncture','chiropractic','counselling-psychotherapy','medical-aesthetics','naturopathic','neurofeedback','nutritional-support','physiotherapy','reflexology-lymphatic-drainage','registered-massage-therapy','traditional-chinese-medicine'];
+  const paramedicalPages = ['acupuncture','chiropractic','counselling-psychotherapy','medical-aesthetics','naturopathic','neurofeedback','nutritional-support','occupational-therapy','physiotherapy','reflexology-lymphatic-drainage','registered-massage-therapy','traditional-chinese-medicine'];
   const page = document.body.dataset.page;
   if (!paramedicalPages.includes(page)) return;
 

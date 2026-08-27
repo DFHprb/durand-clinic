@@ -263,6 +263,9 @@
 
       <div style="max-width:640px;margin:40px auto 0;" class="fade-in">
         <form id="ot-inquiry-form" onsubmit="handleOtInquirySubmit(event)">
+          <input type="hidden" name="access_key" value="8f654c5f-735c-407f-84dc-0e4bb69b146e">
+          <input type="hidden" name="subject" value="New Occupational Therapy Inquiry — The Durand Clinic">
+          <input type="checkbox" name="botcheck" style="display:none;">
           <div class="form-grid">
             <div class="form-group">
               <label for="parentName">Name *</label>
@@ -301,20 +304,28 @@
   <div id="footer-placeholder"></div>
   <script src="js/main.js"></script>
   <script>
-    function handleOtInquirySubmit(e) {
+    async function handleOtInquirySubmit(e) {
       e.preventDefault();
-      var form = document.getElementById('ot-inquiry-form');
-      var data = new FormData(form);
-      var subject = encodeURIComponent('Occupational Therapy Inquiry — ' + (data.get('parentName') || 'New Inquiry'));
-      var body = encodeURIComponent(
-        'Name: ' + data.get('parentName') + '\n' +
-        'Email: ' + data.get('email') + '\n' +
-        'Phone: ' + data.get('phone') + '\n\n' +
-        'Message:\n' + data.get('message')
-      );
-      window.open('mailto:info@durandhealth.com?subject=' + subject + '&body=' + body, '_self');
-      form.style.display = 'none';
-      document.getElementById('ot-form-success').style.display = 'block';
+      const form = document.getElementById('ot-inquiry-form');
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      const data = new FormData(form);
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        form.style.display = 'none';
+        document.getElementById('ot-form-success').style.display = 'block';
+      } else {
+        btn.textContent = 'Submit Inquiry →';
+        btn.disabled = false;
+        alert('Something went wrong. Please email us directly at info@durandhealth.com');
+      }
     }
   </script>
 </body>

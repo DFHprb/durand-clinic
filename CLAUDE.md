@@ -113,9 +113,10 @@ durand-clinic/
 - "No factory lines. No upselling. VIP experience."
 - Licensable clinic model for global expansion
 
-### Analytics & Tracking (critical gap)
-- **NEW GA4 property** required (don't reuse the Hamilton `G-2FGYQ02L5V`) — Sarah to create
-- **No tracking currently installed on new site** — must add GA4 + GTM to all 31 HTML pages
+### Analytics & Tracking
+- **GA4 property:** durand.clinic now uses the existing Hamilton/durandhealth.com property `G-2FGYQ02L5V` (decision reversed 2026-09-03 — previously planned to spin up a separate new property; do NOT create/switch to a new one without checking first)
+- GA4 snippet is installed on all 35 HTML pages
+- GTM still not installed — remains open
 - **No Meta Pixel, no LinkedIn Insight Tag** — to add when ads campaigns go live
 - **No Microsoft Clarity** (session recording) — free to add, recommended
 
@@ -127,7 +128,8 @@ durand-clinic/
 ### What's Next in Phase 1a (not yet done)
 - [ ] Upgrade schema markup (GTHA geo, MedicalClinic with address, FAQ, Physician)
 - [ ] Update canonical URLs across all 31 pages (vercel.app → durand.clinic)
-- [ ] Add GA4 + GTM snippet scaffolding to all pages
+- [x] Add GA4 snippet to all pages (using existing Hamilton property `G-2FGYQ02L5V`)
+- [ ] Add GTM snippet scaffolding to all pages
 - [ ] Create `vercel.json` (security headers + redirect scaffolding)
 - [ ] Write `LAUNCH_CHECKLIST.md`
 - [ ] Draft Netfirms DNS instructions for Paven

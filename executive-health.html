@@ -586,7 +586,11 @@
     (function () {
       var slides = document.querySelectorAll('.testimonial-slide');
       var dots = document.querySelectorAll('.testimonial-dot');
+      var carousel = document.querySelector('.testimonial-carousel');
       var current = 0;
+      var AUTO_ADVANCE_MS = 8000;
+      var autoplayTimer = null;
+      var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       function show(index) {
         current = (index + slides.length) % slides.length;
@@ -594,11 +598,35 @@
         dots.forEach(function (dot, i) { dot.classList.toggle('active', i === current); });
       }
 
+      function startAutoplay() {
+        if (reducedMotion || slides.length < 2) return;
+        stopAutoplay();
+        autoplayTimer = setInterval(function () { show(current + 1); }, AUTO_ADVANCE_MS);
+      }
+
+      function stopAutoplay() {
+        if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+      }
+
+      function restartAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+      }
+
       var prevBtns = document.querySelectorAll('.testimonial-nav--prev');
       var nextBtns = document.querySelectorAll('.testimonial-nav--next');
-      prevBtns.forEach(function (btn) { btn.addEventListener('click', function () { show(current - 1); }); });
-      nextBtns.forEach(function (btn) { btn.addEventListener('click', function () { show(current + 1); }); });
-      dots.forEach(function (dot, i) { dot.addEventListener('click', function () { show(i); }); });
+      prevBtns.forEach(function (btn) { btn.addEventListener('click', function () { show(current - 1); restartAutoplay(); }); });
+      nextBtns.forEach(function (btn) { btn.addEventListener('click', function () { show(current + 1); restartAutoplay(); }); });
+      dots.forEach(function (dot, i) { dot.addEventListener('click', function () { show(i); restartAutoplay(); }); });
+
+      if (carousel) {
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+        carousel.addEventListener('focusin', stopAutoplay);
+        carousel.addEventListener('focusout', startAutoplay);
+      }
+
+      startAutoplay();
     })();
   </script>
 </body>
